@@ -1,15 +1,13 @@
 
 type ButtonProps = {
   className?: string;
-  appName: string;
   children: React.ReactNode;
 };
 
-export function Button({ className, appName, children }: ButtonProps){
+export function Button({ className, children }: ButtonProps){
   return (
     <button
       className={className}
-      onClick={() => alert(appName)}
     >
       {children}
     </button>
