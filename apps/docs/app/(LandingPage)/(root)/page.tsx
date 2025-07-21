@@ -2,7 +2,6 @@
 import { 
   Hero, 
   Footer, 
-  Features, 
   CTA, 
   ComponentShowcase 
 } from "../components";
@@ -10,8 +9,7 @@ import {
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <Features />
+      <Hero /> 
       <ComponentShowcase />
       <CTA />
       <Footer />

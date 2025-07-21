@@ -1,7 +1,17 @@
+import { 
+    AnimatedButton,
+    FAQ, 
+    NeumorphButton,
+    Toggle 
+} from "../../components";
+
 export default function ComponentShowcase() {
     return (
         <div>
-            <h1>ComponentShowcase</h1>
+            <FAQ/>
+            <Toggle />
+            <NeumorphButton />
+            <AnimatedButton />
         </div>
     )
 }

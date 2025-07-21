@@ -10,7 +10,7 @@ export default function AnimatedButton({ titleOne, titleTwo }: ButtonProps) {
     <div className="flex justify-center items-center px-4">
       <RotatingButton>
         <a
-          className="group relative flex items-center gap-2 bg-black text-white py-2.5 px-5 sm:py-3 sm:px-6 rounded-lg sm:rounded-xl shadow-lg cursor-pointer transition-all duration-300 ease-in-out"
+          className="group relative flex items-center cursor-pointer gap-2 bg-black text-white py-2.5 px-5 sm:py-3 sm:px-6 rounded-lg sm:rounded-xl shadow-lg transition-all duration-300 ease-in-out"
         >
           <span className="relative text-sm sm:text-base lg:text-lg font-medium overflow-hidden leading-tight">
             <span className="block transition-transform duration-300 ease-in-out group-hover:-translate-y-full">

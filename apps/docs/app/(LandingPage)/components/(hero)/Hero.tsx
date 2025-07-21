@@ -1,4 +1,4 @@
-import BackGround from "../../../assets/Background";
+import BackGround from "../../../assets/svgs/Background";
 import { 
   HeroCTA,
   HeroImageMockUp, 
@@ -10,9 +10,9 @@ import {
 export default function Home() {
     return (
       <div className="min-h-screen bg-white relative overflow-hidden">
-        <div className="absolute inset-0 w-full h-full">
+        {/* <div className="absolute inset-0 w-full h-full">
           <BackGround />
-        </div>
+        </div> */}
 
         <div className="relative z-10">
           <Navbar />

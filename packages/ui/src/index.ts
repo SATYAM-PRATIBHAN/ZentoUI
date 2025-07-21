@@ -1,2 +1,4 @@
-export * from "./components/Button/index"; 
-export * from "./components/Card/index";
+export * from "./components/Button"; 
+export * from "./components/Card";
+export * from "./components/Accordion";
+export * from "./components/Switch"

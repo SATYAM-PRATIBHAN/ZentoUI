@@ -1,12 +1,12 @@
 const HeroImageMockUp = () => (
-    <div className="max-w-5xl mx-auto py-10" style={{ minHeight: "800px" }}>
+    <div className="max-w-6xl mx-auto py-10" style={{ minHeight: "800px" }}>
       <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 sm:p-8 shadow-2xl border border-gray-200">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Card 1: Welcome Section */}
           <div className="bg-white flex flex-col justify-center items-center rounded-xl p-5 border border-blue-200 shadow-md hover:shadow-lg transition-shadow">
             <h3 className="text-black font-semibold">Welcome Aboard</h3>
             <p className="mt-2 text-sm text-gray-500">Start your journey with us today!</p>
-            <div className="mt-4 h-10 w-24 rounded-full bg-black text-white flex items-center justify-center cursor-pointer transition-colors">
+            <div className="mt-4 h-10 w-24 rounded-full bg-black text-white flex items-center justify-center transition-colors">
               Explore
             </div>
           </div>

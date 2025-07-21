@@ -1,3 +1,3 @@
 export * from "./RotatingButton"; 
 export * from "./NormalButton";
-export * from "./NeumorphisedButton"
+export * from "./NeumorphismButton";
