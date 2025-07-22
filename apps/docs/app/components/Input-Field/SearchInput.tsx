@@ -1,9 +1,9 @@
-import { SearchInput } from "@repo/ui";
+import { SearchInput } from '@repo/ui';
 
 export default function SearchField() {
-    return (
-        <div className="flex justify-center items-center">
-            <SearchInput />
-        </div>
-    )
+  return (
+    <div className="flex items-center justify-center">
+      <SearchInput />
+    </div>
+  );
 }

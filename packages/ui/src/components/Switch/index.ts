@@ -1,2 +1,2 @@
-export * from "./ToggleButton";
-export * from "./ThemeSwitch";
+export * from './ThemeSwitch';
+export * from './ToggleButton';

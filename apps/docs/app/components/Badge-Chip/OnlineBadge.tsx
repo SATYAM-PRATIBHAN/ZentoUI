@@ -1,9 +1,9 @@
-import { OnlineBadge } from "@repo/ui"
+import { OnlineBadge } from '@repo/ui';
 
 export default function OnlineChip() {
-    return (
-        <div className="flex justify-center items-center">
-            <OnlineBadge />
-        </div>
-    )
+  return (
+    <div className="flex items-center justify-center">
+      <OnlineBadge />
+    </div>
+  );
 }

@@ -1,1 +1,1 @@
-export * from "./FAQ-Accordion"
+export * from './FAQ-Accordion';

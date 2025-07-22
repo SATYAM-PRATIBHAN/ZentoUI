@@ -1,17 +1,17 @@
 import { CreditCard, LayoutTemplate } from "lucide-react";
 
 export default function BottomText() {
-    return (
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-purple-200/70">
-          <div className="flex items-center gap-1">
-            <CreditCard className="w-4 h-4" />
-            <span>All Free Components</span>
-          </div>
-          <div className="hidden sm:block w-1 h-1 bg-purple-200/50 rounded-full"></div>
-          <div className="flex items-center gap-1">
-            <LayoutTemplate className="w-4 h-4" />
-            <span>Open-source. Customizable.</span>
-          </div>
-        </div>
-    )
+  return (
+    <div className="flex flex-col items-center justify-center gap-4 text-purple-200/70 text-sm sm:flex-row">
+      <div className="flex items-center gap-1">
+        <CreditCard className="h-4 w-4" />
+        <span>All Free Components</span>
+      </div>
+      <div className="hidden h-1 w-1 rounded-full bg-purple-200/50 sm:block" />
+      <div className="flex items-center gap-1">
+        <LayoutTemplate className="h-4 w-4" />
+        <span>Open-source. Customizable.</span>
+      </div>
+    </div>
+  );
 }

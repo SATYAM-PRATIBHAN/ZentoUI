@@ -1,1 +1,1 @@
-export {default as FAQ} from "./FAQAccordion";
+export { default as FAQ } from './FAQAccordion';

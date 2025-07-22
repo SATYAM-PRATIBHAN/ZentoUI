@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { CheckCircle, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export function ToastDemo() {
   const [showToast, setShowToast] = useState(false);
@@ -40,10 +40,9 @@ export function ToastDemo() {
       <AnimatePresence>
         {showToast && (
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0, y: 50 }}
             style={{
               position: "fixed",
               bottom: "30px",
@@ -67,6 +66,7 @@ export function ToastDemo() {
               minWidth: "320px",
               maxWidth: "360px",
             }}
+            transition={{ duration: 0.3 }}
           >
             <span
               style={{
@@ -79,16 +79,24 @@ export function ToastDemo() {
               <CheckCircle color="#34d399" size={22} />
             </span>
             <div style={{ flex: 1 }}>
-              <div style={{ fontWeight: 600, fontSize: "16px", marginBottom: "2px" }}>
+              <div
+                style={{
+                  fontWeight: 600,
+                  fontSize: "16px",
+                  marginBottom: "2px",
+                }}
+              >
                 Payment Successful!
               </div>
-              <div style={{ fontWeight: 400, fontSize: "10px", color: "#b6f3d7" }}>
+              <div
+                style={{ fontWeight: 400, fontSize: "10px", color: "#b6f3d7" }}
+              >
                 Your payment has been processed and your order is on its way.
               </div>
             </div>
             <button
-              onClick={handleCloseToast}
               aria-label="Close"
+              onClick={handleCloseToast}
               style={{
                 border: "none",
                 cursor: "pointer",
@@ -99,7 +107,7 @@ export function ToastDemo() {
                 alignItems: "center",
               }}
             >
-              <X size={18} color="black"/>
+              <X color="black" size={18} />
             </button>
           </motion.div>
         )}

@@ -1,15 +1,10 @@
-"use client"
-import { 
-  Hero, 
-  Footer, 
-  CTA, 
-  ComponentShowcase 
-} from "../components";
+"use client";
+import { ComponentShowcase, CTA, Footer, Hero } from "../components";
 
 export default function Home() {
   return (
     <main>
-      <Hero /> 
+      <Hero />
       <ComponentShowcase />
       <CTA />
       <Footer />

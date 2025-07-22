@@ -1,9 +1,9 @@
-import { ToggleButton } from "@repo/ui";
+import { ToggleButton } from '@repo/ui';
 
 export default function Toggle() {
-    return (
-        <div className="flex justify-center items-center px-4">
-            <ToggleButton />
-        </div>
-    )
+  return (
+    <div className="flex items-center justify-center px-4">
+      <ToggleButton />
+    </div>
+  );
 }

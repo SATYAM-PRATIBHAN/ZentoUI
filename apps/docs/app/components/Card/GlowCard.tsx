@@ -1,9 +1,9 @@
-import { GlowCard } from "@repo/ui";
+import { GlowCard } from '@repo/ui';
 
 export default function GlowingCard() {
-    return (
-        <div className="flex justify-center items-center">
-            <GlowCard />
-        </div>
-    )
+  return (
+    <div className="flex items-center justify-center">
+      <GlowCard />
+    </div>
+  );
 }

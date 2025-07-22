@@ -1,8 +1,7 @@
-
+import { AnimatePresence, motion } from "framer-motion";
+import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
 import { cn } from "../../lib/utils"; // Use your utility
-import { Plus, Minus } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import "../../../styles.css";
 
 export interface FAQItem {
@@ -18,46 +17,52 @@ export const FAQAccordion = ({ items }: { items: FAQItem[] }) => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="mx-auto max-w-2xl">
       {items.map((item, index) => (
         <motion.div
-          key={item.id}
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          key={item.id}
           transition={{ duration: 0.5, delay: index * 0.1 }}
           viewport={{ once: true }}
+          whileInView={{ opacity: 1, y: 0 }}
         >
           <motion.div
-            layout
-            transition={{ layout: { duration: 0.4, type: "spring" } }}
             className={cn(
-              "glass-card w-full mb-4 px-6 py-6 rounded-2xl border transition-all duration-300 shadow-lg",
+              "glass-card mb-4 w-full rounded-2xl border px-6 py-6 shadow-lg transition-all duration-300",
               activeId === item.id
                 ? "border-gray-200 bg-white/10 dark:bg-black/10"
                 : "border-white"
             )}
+            layout
             onClick={() => handleCardClick(item.id)}
+            transition={{ layout: { duration: 0.4, type: "spring" } }}
           >
-            <div className="flex justify-between items-center cursor-pointer">
-              <h3 className="text-gray-200 text-lg font-medium pr-4">{item.question}</h3>
+            <div className="flex cursor-pointer items-center justify-between">
+              <h3 className="pr-4 font-medium text-gray-200 text-lg">
+                {item.question}
+              </h3>
               <motion.div
                 animate={{ rotate: activeId === item.id ? 180 : 0 }}
+                className="flex h-6 w-6 items-center justify-center rounded-full bg-premium-gold/20 text-premium-gold"
                 transition={{ duration: 0.3 }}
-                className="flex items-center justify-center w-6 h-6 rounded-full bg-premium-gold/20 text-premium-gold"
               >
-                {activeId === item.id ? <Minus size={16} /> : <Plus size={16} />}
+                {activeId === item.id ? (
+                  <Minus size={16} />
+                ) : (
+                  <Plus size={16} />
+                )}
               </motion.div>
             </div>
 
             <AnimatePresence initial={false}>
               {activeId === item.id && (
                 <motion.div
-                  key="answer"
-                  initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
+                  className="mt-4 overflow-hidden text-premium-muted text-sm"
                   exit={{ opacity: 0, height: 0 }}
+                  initial={{ opacity: 0, height: 0 }}
+                  key="answer"
                   transition={{ duration: 0.4 }}
-                  className="overflow-hidden mt-4 text-premium-muted text-sm"
                 >
                   <p className="text-gray-600">{item.answer}</p>
                 </motion.div>

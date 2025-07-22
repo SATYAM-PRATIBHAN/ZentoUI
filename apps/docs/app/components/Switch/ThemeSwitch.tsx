@@ -1,9 +1,9 @@
-import { ThemeSwitch } from "@repo/ui";
+import { ThemeSwitch } from '@repo/ui';
 
 export default function ThemeSelector() {
-    return (
-        <div className="flex justify-center items-center">
-            <ThemeSwitch />
-        </div>
-    )
+  return (
+    <div className="flex items-center justify-center">
+      <ThemeSwitch />
+    </div>
+  );
 }

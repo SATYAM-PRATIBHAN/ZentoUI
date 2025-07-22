@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { Button } from "@repo/ui";
+import { Button } from '@repo/ui';
 
 interface ButtonProp {
   className?: string;
@@ -9,11 +9,14 @@ interface ButtonProp {
 
 export default function OutLinedButton({ children, className }: ButtonProp) {
   return (
-    <div className="flex justify-center items-center px-4">
+    <div className="flex items-center justify-center px-4">
       <Button
-        className={className || "border-2 border-black text-black py-2 px-5 sm:py-2 sm:px-6 rounded-lg sm:rounded-xl text-sm sm:text-base lg:text-lg font-medium duration-200 cursor-pointer hover:bg-black hover:text-white"}
+        className={
+          className ||
+          'cursor-pointer rounded-lg border-2 border-black px-5 py-2 font-medium text-black text-sm duration-200 hover:bg-black hover:text-white sm:rounded-xl sm:px-6 sm:py-2 sm:text-base lg:text-lg'
+        }
       >
-        {children || "Book a Call"}
+        {children || 'Book a Call'}
       </Button>
     </div>
   );

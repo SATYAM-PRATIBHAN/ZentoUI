@@ -17,7 +17,9 @@ export function GlowCard() {
       }}
     >
       <div>
-        <h2 style={{ fontSize: "24px", marginBottom: "8px" }}>Premium Access</h2>
+        <h2 style={{ fontSize: "24px", marginBottom: "8px" }}>
+          Premium Access
+        </h2>
         <p style={{ fontSize: "14px", color: "#ccc" }}>
           Unlock advanced components and design systems with full access.
         </p>

@@ -58,32 +58,37 @@ export function ToggleButton() {
   return (
     <div style={containerStyle as React.CSSProperties}>
       <input
-        type="checkbox"
-        id="toggle-switch"
         checked={checked}
+        id="toggle-switch"
         onChange={() => setChecked(!checked)}
         style={{ display: "none" }}
+        type="checkbox"
       />
       <label
         htmlFor="toggle-switch"
-        style={switchStyle as React.CSSProperties}
         onMouseEnter={(e) => {
-          const toggle = e.currentTarget.querySelector(".toggle") as HTMLElement | null;
+          const toggle = e.currentTarget.querySelector(
+            ".toggle"
+          ) as HTMLElement | null;
           if (toggle) {
-            toggle.style.boxShadow = "-4px -4px 12px #ffffff, 4px 4px 12px #9b9b9b";
+            toggle.style.boxShadow =
+              "-4px -4px 12px #ffffff, 4px 4px 12px #9b9b9b";
           }
         }}
         onMouseLeave={(e) => {
-          const toggle = e.currentTarget.querySelector(".toggle") as HTMLElement | null;
+          const toggle = e.currentTarget.querySelector(
+            ".toggle"
+          ) as HTMLElement | null;
           if (toggle) {
             toggle.style.boxShadow = checked
               ? "-4px -4px 8px #ffffff, 4px 4px 8px #8a8a8a"
               : "-4px -4px 8px #ffffff, 4px 4px 8px #b0b0b0";
           }
         }}
+        style={switchStyle as React.CSSProperties}
       >
         <div className="toggle" style={toggleStyle as React.CSSProperties}>
-          <div className="led" style={ledStyle as React.CSSProperties}></div>
+          <div className="led" style={ledStyle as React.CSSProperties} />
         </div>
       </label>
     </div>

@@ -1,1 +1,1 @@
-export * from "./GlowCard";
+export * from './GlowCard';

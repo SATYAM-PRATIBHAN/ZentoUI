@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { Sun, Moon, Monitor } from "lucide-react";
 import { motion } from "framer-motion";
+import { Monitor, Moon, Sun } from "lucide-react";
+import { useState } from "react";
 
 const icons = {
-  light: <Sun size={20} color="black" />,
-  dark: <Moon size={20} color="black" />,
-  system: <Monitor size={20} color="black" />,
+  light: <Sun color="black" size={20} />,
+  dark: <Moon color="black" size={20} />,
+  system: <Monitor color="black" size={20} />,
 };
 
 export function ThemeSwitch() {
@@ -29,7 +29,6 @@ export function ThemeSwitch() {
       {/* Animated background highlight */}
       <motion.div
         layout
-        transition={{ type: "spring", stiffness: 500, damping: 30 }}
         style={{
           position: "absolute",
           top: 6,
@@ -41,6 +40,7 @@ export function ThemeSwitch() {
           boxShadow: "0px 12px 40px -4px rgba(0, 0, 0, 0.40)",
           zIndex: 1,
         }}
+        transition={{ type: "spring", stiffness: 500, damping: 30 }}
       />
 
       {options.map((mode) => (

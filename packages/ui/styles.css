@@ -1,10 +1,1 @@
 @import "tailwindcss";
-
-/* Custom utility classes for Accordion component with increased specificity */
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  border-radius: 1rem !important; /* rounded-3xl */
-}
