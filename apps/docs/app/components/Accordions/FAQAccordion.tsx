@@ -18,7 +18,7 @@ const faqData: FAQItem[] = [
 
 export default function FAQ({ data } : { data?: FAQItem[] }) {
   return (
-    <section className="py-20 md:py-24 px-6 md:px-0 relative overflow-hidden">
+    <section className="w-full">
         <FAQAccordion items={data || faqData} />
     </section>
   );

@@ -9,7 +9,7 @@ import {
 
 export default function Home() {
     return (
-      <div className="min-h-screen bg-white relative overflow-hidden">
+      <div className="min-h-screen relative overflow-hidden">
         {/* <div className="absolute inset-0 w-full h-full">
           <BackGround />
         </div> */}
