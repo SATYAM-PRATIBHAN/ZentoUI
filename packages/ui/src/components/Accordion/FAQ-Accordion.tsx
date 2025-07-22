@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
-import { cn } from "../../lib/utils"; // Use your utility
 import "../../../styles.css";
 
 export interface FAQItem {
@@ -12,39 +11,68 @@ export interface FAQItem {
 
 export const FAQAccordion = ({ items }: { items: FAQItem[] }) => {
   const [activeId, setActiveId] = useState<number | null>(null);
+
   const handleCardClick = (id: number) => {
     setActiveId(activeId === id ? null : id);
   };
 
   return (
-    <div className="mx-auto max-w-2xl">
+    <div style={{ maxWidth: "640px", margin: "0 auto" }}>
       {items.map((item, index) => (
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          key={item.id}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1, y: 0 }}
-        >
+        <motion.div key={item.id}>
           <motion.div
-            className={cn(
-              "glass-card mb-4 w-full rounded-2xl border px-6 py-6 shadow-lg transition-all duration-300",
-              activeId === item.id
-                ? "border-gray-200 bg-white/10 dark:bg-black/10"
-                : "border-white"
-            )}
             layout
             onClick={() => handleCardClick(item.id)}
             transition={{ layout: { duration: 0.4, type: "spring" } }}
+            style={{
+              width: "100%",
+              borderRadius: "16px",
+              border: "1px solid",
+              borderColor:
+                activeId === item.id ? "rgba(200, 200, 200, 0.4)" : "#fff",
+              padding: "24px",
+              marginBottom: "16px",
+              boxShadow: "0 4px 16px rgba(0,0,0,0.15)",
+              background:
+                activeId === item.id
+                  ? "rgba(255, 255, 255, 0.05)"
+                  : "rgba(255, 255, 255, 0.02)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+              transition: "all 0.3s ease-in-out",
+              cursor: "pointer",
+            }}
           >
-            <div className="flex cursor-pointer items-center justify-between">
-              <h3 className="pr-4 font-medium text-gray-200 text-lg">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "18px",
+                  fontWeight: 500,
+                  paddingRight: "16px",
+                  color: "black",
+                }}
+              >
                 {item.question}
               </h3>
               <motion.div
                 animate={{ rotate: activeId === item.id ? 180 : 0 }}
-                className="flex h-6 w-6 items-center justify-center rounded-full bg-premium-gold/20 text-premium-gold"
                 transition={{ duration: 0.3 }}
+                style={{
+                  height: "24px",
+                  width: "24px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: "9999px",
+                  backgroundColor: "white", // gold glow bg
+                  color: "black", // gold
+                }}
               >
                 {activeId === item.id ? (
                   <Minus size={16} />
@@ -57,14 +85,20 @@ export const FAQAccordion = ({ items }: { items: FAQItem[] }) => {
             <AnimatePresence initial={false}>
               {activeId === item.id && (
                 <motion.div
-                  animate={{ opacity: 1, height: "auto" }}
-                  className="mt-4 overflow-hidden text-premium-muted text-sm"
-                  exit={{ opacity: 0, height: 0 }}
-                  initial={{ opacity: 0, height: 0 }}
                   key="answer"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.4 }}
+                  style={{
+                    textAlign: "left",
+                    marginTop: "16px",
+                    overflow: "hidden",
+                    fontSize: "14px",
+                    color: "#4b5563",
+                  }}
                 >
-                  <p className="text-gray-600">{item.answer}</p>
+                  <p>{item.answer}</p>
                 </motion.div>
               )}
             </AnimatePresence>

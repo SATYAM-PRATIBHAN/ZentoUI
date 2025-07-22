@@ -1,4 +1,4 @@
-import { SearchInput } from '@repo/ui';
+import { SearchInput } from "@repo/ui";
 
 export default function SearchField() {
   return (

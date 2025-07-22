@@ -1,2 +1,2 @@
-export * from './InProgressBadge';
-export * from './OnlineBadge';
+export * from "./InProgressBadge";
+export * from "./OnlineBadge";

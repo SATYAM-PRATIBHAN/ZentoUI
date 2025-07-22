@@ -1,15 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function ToggleButton() {
   const [checked, setChecked] = useState(false);
+  const [isSmall, setIsSmall] = useState(false);
+
+  useEffect(() => {
+    const checkSize = () => setIsSmall(window.innerWidth < 500);
+    checkSize();
+    window.addEventListener("resize", checkSize);
+    return () => window.removeEventListener("resize", checkSize);
+  }, []);
 
   const containerStyle = {
     position: "relative",
-    width: "150px",
-    height: "60px",
-    background: "#e8e8e8", // more whitish background
+    width: isSmall ? "100px" : "150px",
+    height: isSmall ? "40px" : "60px",
+    background: "#e8e8e8",
     borderRadius: "50px",
-    boxShadow: "inset -8px -8px 16px #ffffff, inset 8px 8px 16px #e0e0e0", // lighter shadow for a whiter look
+    boxShadow: "inset -8px -8px 16px #ffffff, inset 8px 8px 16px #e0e0e0",
   };
 
   const switchStyle = {
@@ -26,10 +34,10 @@ export function ToggleButton() {
 
   const toggleStyle = {
     position: "absolute",
-    width: "80px",
-    height: "50px",
-    top: "5px",
-    left: checked ? "65px" : "5px",
+    width: isSmall ? "52px" : "80px",
+    height: isSmall ? "30px" : "50px",
+    top: isSmall ? "5px" : "5px",
+    left: checked ? (isSmall ? "43px" : "65px") : "5px",
     borderRadius: "50px",
     paddingLeft: "10px",
     display: "flex",
@@ -45,8 +53,8 @@ export function ToggleButton() {
   };
 
   const ledStyle = {
-    width: "10px",
-    height: "10px",
+    width: isSmall ? "8px" : "10px",
+    height: isSmall ? "8px" : "10px",
     borderRadius: "50%",
     background: checked ? "yellow" : "grey",
     boxShadow: checked
@@ -68,7 +76,7 @@ export function ToggleButton() {
         htmlFor="toggle-switch"
         onMouseEnter={(e) => {
           const toggle = e.currentTarget.querySelector(
-            ".toggle"
+            ".toggle",
           ) as HTMLElement | null;
           if (toggle) {
             toggle.style.boxShadow =
@@ -77,7 +85,7 @@ export function ToggleButton() {
         }}
         onMouseLeave={(e) => {
           const toggle = e.currentTarget.querySelector(
-            ".toggle"
+            ".toggle",
           ) as HTMLElement | null;
           if (toggle) {
             toggle.style.boxShadow = checked

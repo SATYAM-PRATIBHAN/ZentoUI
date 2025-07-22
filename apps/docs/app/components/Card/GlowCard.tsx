@@ -1,4 +1,4 @@
-import { GlowCard } from '@repo/ui';
+import { GlowCard } from "@repo/ui";
 
 export default function GlowingCard() {
   return (

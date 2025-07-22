@@ -1,4 +1,4 @@
-import { ThemeSwitch } from '@repo/ui';
+import { ThemeSwitch } from "@repo/ui";
 
 export default function ThemeSelector() {
   return (

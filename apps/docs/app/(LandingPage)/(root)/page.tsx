@@ -1,13 +1,14 @@
 "use client";
-import { ComponentShowcase, CTA, Footer, Hero } from "../components";
+import { CTA, Footer, Hero } from "../components";
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <ComponentShowcase />
-      <CTA />
-      <Footer />
+    <main style={{ position: "relative", overflow: "hidden" }}>
+      <div style={{ position: "relative", zIndex: 1 }}>
+        <Hero />
+        <CTA />
+        <Footer />
+      </div>
     </main>
   );
 }

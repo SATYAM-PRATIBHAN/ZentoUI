@@ -1,4 +1,4 @@
-import { OnlineBadge } from '@repo/ui';
+import { OnlineBadge } from "@repo/ui";
 
 export default function OnlineChip() {
   return (

@@ -4,20 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="pya-12 relative z-10 mt-20 w-full overflow-hidden bg-white px-6 text-black">
-      {/* Soft neutral ray effect */}
-      {/* <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-0 z-0 -translate-x-1/2"
-        style={{
-          width: "120vw",
-          height: "220px",
-          background:
-            "radial-gradient(ellipse 60% 100% at 50% 0%, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.03) 60%, transparent 100%)",
-          filter: "blur(8px)",
-        }}
-      /> */}
-
+    <footer className="pya-12 relative z-10 mt-20 w-full overflow-hidden px-6 text-black">
       <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-4">
         {/* Brand & CTA */}
         <div className="space-y-4">
@@ -32,11 +19,11 @@ export default function Footer() {
           </div>
           <p className="text-neutral-500 text-sm">
             Built by{" "}
-            <Link className="text-blue-600" href="https://x.com/yourhandle">
-              @YourHandle
+            <Link className="text-blue-600" href="https://x.com/s_pratibhan">
+              @s_pratibhan
             </Link>
           </p>
-          <button className="rounded-md bg-black/5 px-4 py-2 text-sm transition hover:bg-black/10">
+          <button className="rounded-md cursor-pointer bg-black/5 px-4 py-2 text-sm transition hover:bg-black/10">
             Share Your Thoughts On <X className="ml-1 inline-block h-4 w-4" />
           </button>
           <p className="text-neutral-500 text-xs">
@@ -65,13 +52,17 @@ export default function Footer() {
           <h4 className="mb-2 font-semibold text-sm">Socials</h4>
           <ul className="space-y-1 text-neutral-500 text-sm">
             <li>
-              <Link href="https://github.com/zento-ui">Github</Link>
+              <Link href="https://github.com/SATYAM-PRATIBHAN/ZentoUI">
+                Github
+              </Link>
             </li>
             <li>
-              <Link href="https://linkedin.com/in/yourprofile">LinkedIn</Link>
+              <Link href="https://www.linkedin.com/in/satyampratibhan/">
+                LinkedIn
+              </Link>
             </li>
             <li>
-              <Link href="https://x.com/yourhandle">X</Link>
+              <Link href="https://x.com/s_pratibhan">X</Link>
             </li>
           </ul>
         </div>

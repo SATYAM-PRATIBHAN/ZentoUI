@@ -84,12 +84,13 @@ export function ToastDemo() {
                   fontWeight: 600,
                   fontSize: "16px",
                   marginBottom: "2px",
+                  color: "#34d399",
                 }}
               >
                 Payment Successful!
               </div>
               <div
-                style={{ fontWeight: 400, fontSize: "10px", color: "#b6f3d7" }}
+                style={{ fontWeight: 400, fontSize: "10px", color: "#34d399" }}
               >
                 Your payment has been processed and your order is on its way.
               </div>

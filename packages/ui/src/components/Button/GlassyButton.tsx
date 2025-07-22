@@ -15,11 +15,11 @@ export function GlassyButton({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
-        borderRadius: "30px",
+        borderRadius: "15px",
         border: isHovered
           ? "1px solid rgba(255,255,255,0.4)"
           : "1px solid transparent",
-        background: "rgba(255, 255, 255, 0.05)",
+        background: "white",
         boxShadow: isHovered
           ? "3px 4px 15px rgba(165, 86, 251, 0.35)"
           : "3px 4px 11.1px rgba(165, 86, 251, 0.23)",

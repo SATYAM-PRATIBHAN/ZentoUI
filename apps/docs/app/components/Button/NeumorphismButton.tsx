@@ -1,5 +1,5 @@
-import { NeumorphismButton } from '@repo/ui';
-import type React from 'react';
+import { NeumorphismButton } from "@repo/ui";
+import type React from "react";
 
 export default function NeumorphButton({
   children,
@@ -8,7 +8,7 @@ export default function NeumorphButton({
 }) {
   return (
     <div className="flex items-center justify-center px-4">
-      <NeumorphismButton>{children || 'Neumorphism Button'}</NeumorphismButton>
+      <NeumorphismButton>{children || "Button"}</NeumorphismButton>
     </div>
   );
 }

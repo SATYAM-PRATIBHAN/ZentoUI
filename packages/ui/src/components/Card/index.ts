@@ -1,1 +1,2 @@
-export * from './GlowCard';
+export * from "./GlowCard";
+export * from "./ProfileCard";
