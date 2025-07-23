@@ -3,7 +3,7 @@ import { FAQAccordion, type FAQItem } from "@repo/ui";
 const faqData: FAQItem[] = [
   {
     id: 2,
-    question: "What services do you offer?",
+    question: "Like the Design?",
     answer:
       "Still thinking of a design, just use it the ZentoUI components already.",
   },
