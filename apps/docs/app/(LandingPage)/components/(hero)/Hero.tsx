@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Navbar from "../Navbar";
 import { HeroCTA, HeroImageMockUp, HeroText } from "./components";
 import { motion } from "framer-motion";
 
@@ -40,7 +39,6 @@ export default function Home() {
       </motion.div>
 
       <div className="relative z-10">
-        <Navbar />
         <main className="px-4 py-12 sm:px-6 sm:py-20 lg:px-8">
           {/* HeroText Animation */}
           <motion.div

@@ -11,20 +11,49 @@ const itemVariants: Variants = {
 };
 
 export interface RotatingButtonProps {
-  children: React.ReactNode;
+  data: [titleOne: string, titleTwo: string];
   className?: string;
 }
 
 export const RotatingButton: React.FC<RotatingButtonProps> = ({
-  children,
+  data,
   className,
 }) => (
   <motion.div
-    animate="animate"
+    animate="visible"
     className={className ? className : "flex flex-wrap justify-center gap-4"}
-    initial="initial"
+    initial="hidden"
     variants={itemVariants}
   >
-    {children}
+    <div
+      style={{
+        position: "relative",
+        display: "flex",
+        cursor: "pointer",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "0.5rem",
+        borderRadius: "0.5rem",
+        backgroundColor: "black",
+        padding: "0.625rem 1.25rem",
+        color: "white",
+        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        transition: "all 300ms ease-in-out",
+      }}
+      className="group"
+    >
+      <span
+        style={{
+          position: "relative",
+          overflow: "hidden",
+          fontWeight: 500,
+          fontSize: "0.875rem",
+          lineHeight: 1.25,
+        }}
+      >
+        <span className="group-title-one">{data[0] || "Book a Call"}</span>
+        <span className="group-title-two">{data[1] || "Contact us"}</span>
+      </span>
+    </div>
   </motion.div>
 );

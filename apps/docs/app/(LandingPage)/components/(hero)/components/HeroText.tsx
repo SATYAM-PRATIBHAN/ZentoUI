@@ -10,7 +10,7 @@ const HeroText = () => (
     transition={{ duration: 0.6, ease: "easeOut" }}
     className="w-full px-4 text-center sm:px-6 lg:px-8"
   >
-    <h1 className="mb-4 font-extrabold text-4xl text-black leading-tight tracking-tight sm:text-5xl lg:text-7xl lg:leading-[1.15] xl:text-[88px]">
+    <h1 className="mb-4 font-bold text-4xl text-black leading-tight tracking-tight sm:text-5xl lg:text-7xl lg:leading-[1.15] xl:text-[88px]">
       Design{" "}
       <span className="inline-flex items-center">
         <Image

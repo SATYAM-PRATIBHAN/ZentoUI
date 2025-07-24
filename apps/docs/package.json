@@ -13,6 +13,7 @@
   "dependencies": {
     "@repo/ui": "workspace:*",
     "@tailwindcss/postcss": "^4.1.11",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.6",
     "lucide-react": "^0.525.0",
@@ -22,6 +23,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-rough-notation": "^1.0.5",
+    "react-syntax-highlighter": "^15.6.1",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.11"
   },

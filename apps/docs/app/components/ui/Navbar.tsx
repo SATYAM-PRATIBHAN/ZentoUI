@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { OutLinedButton } from "../../components";
 import Link from "next/link";
+import { DOC_ROUTES } from "../../constants/icons/route";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="relative bg-white py-6 sm:px-6 lg:px-8">
+    <header className="relative py-6 sm:px-6 lg:px-8">
       <motion.nav
         className="mx-auto flex max-w-7xl px-4 items-center justify-between"
         initial={{ opacity: 0, y: -20 }}
@@ -29,12 +30,14 @@ export default function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <Image
-            alt="ZentoUI Logo"
-            height={30}
-            src="/ZentoUIBranding.webp"
-            width={100}
-          />
+          <Link href={DOC_ROUTES.HOME}>
+            <Image
+              alt="ZentoUI Logo"
+              height={30}
+              src="/ZentoUIBranding.webp"
+              width={100}
+            />
+          </Link>
         </motion.div>
 
         {/* Desktop Nav */}
@@ -46,27 +49,21 @@ export default function Navbar() {
         >
           <Link
             className="text-gray-600 transition-colors hover:text-black"
-            href="#"
+            href={DOC_ROUTES.HOME}
           >
             Home
           </Link>
           <Link
             className="text-gray-600 transition-colors hover:text-black"
-            href="#"
+            href={DOC_ROUTES.DOCS.ROOT}
           >
             Docs
           </Link>
           <Link
             className="text-gray-600 transition-colors hover:text-black"
-            href="#"
+            href={DOC_ROUTES.PRICING}
           >
             Pricing
-          </Link>
-          <Link
-            className="text-gray-600 transition-colors hover:text-black"
-            href="#"
-          >
-            Contact
           </Link>
           <OutLinedButton className="flex items-center gap-2 lg:px-4 lg:py-[4px]">
             <Github className="h-4 w-4" />

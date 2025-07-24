@@ -1,5 +1,5 @@
 "use client";
-import { CTA, FeatureSection, Footer, Hero } from "../components";
+import { CTA, FeatureSection, Hero } from "../components";
 
 export default function Home() {
   return (
@@ -8,7 +8,6 @@ export default function Home() {
         <Hero />
         <FeatureSection />
         <CTA />
-        <Footer />
       </div>
     </main>
   );

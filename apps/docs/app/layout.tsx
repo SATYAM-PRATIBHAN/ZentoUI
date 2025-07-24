@@ -1,21 +1,39 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import { Geist, Geist_Mono } from "next/font/google";
+import Navbar from "./components/ui/Navbar";
+import Footer from "./components/ui/Footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+const geistSans = Geist({
   variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+
+const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "ZentoUI",
+  openGraph: {
+    title: "ZentoUI - a modern component library",
+    description: "ZentoUI - a modern component library",
+    url: "", //to be audited
+    type: "website",
+    images: [
+      {
+        url: "/og-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "ZentoUI Open Graph Image",
+      },
+    ],
+  },
   description:
     "ZentoUI is a modern, responsive React component library built for sleek and fast web interfaces. It offers beautifully designed, accessible, and customizable UI elements for effortless development.",
-  openGraph: {
+  twitter: {
+    card: "summary_large_image",
     title: "ZentoUI - a modern component library",
     description: "ZentoUI - a modern component library",
     images: [
@@ -35,9 +53,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+    <html lang="en">
+      <head></head>
+      <body
+        suppressHydrationWarning
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <div className="bg-[#f1f1f1]">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

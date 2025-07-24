@@ -3,9 +3,9 @@ import { Monitor, Moon, Sun } from "lucide-react";
 import { useState } from "react";
 
 const icons = {
-  light: <Sun color="black" size={20} />,
-  dark: <Moon color="black" size={20} />,
-  system: <Monitor color="black" size={20} />,
+  light: [<Sun key="light" color="black" size={20} />, "Light Theme"],
+  dark: [<Moon key="dark" color="black" size={20} />, "Dark Theme"],
+  system: [<Monitor key="system" color="black" size={20} />, "System Theme"],
 };
 
 export function ThemeSwitch() {
@@ -47,6 +47,7 @@ export function ThemeSwitch() {
         <button
           key={mode}
           onClick={() => setActive(mode)}
+          aria-label={mode[1]}
           style={{
             position: "relative",
             zIndex: 2,
@@ -61,7 +62,7 @@ export function ThemeSwitch() {
             transition: "color 0.2s ease",
           }}
         >
-          {icons[mode]}
+          {icons[mode][0]}
         </button>
       ))}
     </div>

@@ -1,6 +1,7 @@
 import { X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { DOC_ROUTES } from "../../constants/icons/route";
 
 export default function Footer() {
   return (
@@ -19,7 +20,7 @@ export default function Footer() {
           </div>
           <p className="text-neutral-500 text-sm">
             Built by{" "}
-            <Link className="text-blue-600" href="https://x.com/s_pratibhan">
+            <Link className="text-blue-600" href={DOC_ROUTES.SOCIAL.X}>
               @s_pratibhan
             </Link>
           </p>
@@ -36,13 +37,16 @@ export default function Footer() {
           <h4 className="mb-2 font-semibold text-sm">Pages</h4>
           <ul className="space-y-1 text-neutral-500 text-sm">
             <li>
-              <Link href="/docs">Docs</Link>
+              <Link href={DOC_ROUTES.HOME}>Home</Link>
             </li>
             <li>
-              <Link href="/components">Components</Link>
+              <Link href={DOC_ROUTES.DOCS.ROOT}>Docs</Link>
             </li>
             <li>
-              <Link href="/themes">Themes</Link>
+              <Link href={DOC_ROUTES.THEMES}>Themes</Link>
+            </li>
+            <li>
+              <Link href={DOC_ROUTES.PRICING}>Pricing</Link>
             </li>
           </ul>
         </div>
@@ -52,17 +56,13 @@ export default function Footer() {
           <h4 className="mb-2 font-semibold text-sm">Socials</h4>
           <ul className="space-y-1 text-neutral-500 text-sm">
             <li>
-              <Link href="https://github.com/SATYAM-PRATIBHAN/ZentoUI">
-                Github
-              </Link>
+              <Link href={DOC_ROUTES.SOCIAL.GITHUB}>Github</Link>
             </li>
             <li>
-              <Link href="https://www.linkedin.com/in/satyampratibhan/">
-                LinkedIn
-              </Link>
+              <Link href={DOC_ROUTES.SOCIAL.LINKEDIN}>LinkedIn</Link>
             </li>
             <li>
-              <Link href="https://x.com/s_pratibhan">X</Link>
+              <Link href={DOC_ROUTES.SOCIAL.X}>X</Link>
             </li>
           </ul>
         </div>
@@ -72,10 +72,12 @@ export default function Footer() {
           <h4 className="mb-2 font-semibold text-sm">Legal</h4>
           <ul className="space-y-1 text-neutral-500 text-sm">
             <li>
-              <Link href="/privacy">Privacy Policy</Link>
+              <Link href={DOC_ROUTES.PRIVACY_POLICY}>Privacy Policy</Link>
             </li>
             <li>
-              <Link href="/terms">Terms of Service</Link>
+              <Link href={DOC_ROUTES.TERMS_AND_CONDITIONS}>
+                Terms of Service
+              </Link>
             </li>
           </ul>
         </div>
