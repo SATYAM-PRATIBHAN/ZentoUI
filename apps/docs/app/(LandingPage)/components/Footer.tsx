@@ -12,7 +12,7 @@ export default function Footer() {
             <Image
               alt="ZentoUI Logo"
               height={30}
-              src="/ZentoUILogo.png"
+              src="/ZentoUILogo.webp"
               width={30}
             />
             <span>ZentoUI</span>

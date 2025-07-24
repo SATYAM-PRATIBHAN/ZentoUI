@@ -66,18 +66,10 @@ export function GlowCard() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src="https://ik.imagekit.io/3ntksnet2/Character%20Concept%20Pin.jpeg?updatedAt=1753187958813"
-            alt="Profile"
-            style={styles.image}
-          />
+          <img src="/profilepicture.webp" alt="Profile" style={styles.image} />
         </a>
 
         <h2 style={styles.title}>Cosmic Card</h2>
-
-        <p style={styles.description}>
-          A glowing card component with a sleek, futuristic design.
-        </p>
       </div>
     </div>
   );

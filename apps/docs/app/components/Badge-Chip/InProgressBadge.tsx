@@ -2,7 +2,7 @@ import { InProgressBadge } from "@repo/ui";
 
 export default function InProgressChip() {
   return (
-    <div>
+    <div className="flex justify-center items-center">
       <InProgressBadge />
     </div>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Github } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { OutLinedButton } from "../../components";
@@ -15,20 +15,35 @@ export default function Navbar() {
   };
 
   return (
-    <header className="px-4 py-6 sm:px-6 lg:px-8">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between">
+    <header className="relative bg-white py-6 sm:px-6 lg:px-8">
+      <motion.nav
+        className="mx-auto flex max-w-7xl px-4 items-center justify-between"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         {/* Logo */}
-        <div className="font-bold text-black text-xl sm:text-2xl">
+        <motion.div
+          className="font-bold text-black text-xl sm:text-2xl"
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
           <Image
             alt="ZentoUI Logo"
             height={30}
-            src="/ZentoUIBranding.png"
+            src="/ZentoUIBranding.webp"
             width={100}
           />
-        </div>
+        </motion.div>
 
         {/* Desktop Nav */}
-        <div className="hidden items-center space-x-8 md:flex">
+        <motion.div
+          className="hidden items-center space-x-8 md:flex"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <Link
             className="text-gray-600 transition-colors hover:text-black"
             href="#"
@@ -53,13 +68,13 @@ export default function Navbar() {
           >
             Contact
           </Link>
-          <OutLinedButton className="flex cursor-pointer items-center justify-center gap-2 rounded-lg border-2 border-gray-400 px-5 py-2 font-medium text-gray-500 text-sm duration-200 hover:text-gray-800 sm:rounded-xl sm:px-4 sm:py-1 sm:text-base lg:text-md">
-            <Star className="h-4 w-4" />
+          <OutLinedButton className="flex items-center gap-2 lg:px-4 lg:py-[4px]">
+            <Github className="h-4 w-4" />
             <Link href={"https://github.com/SATYAM-PRATIBHAN/ZentoUI"}>
               Star on Github
             </Link>
           </OutLinedButton>
-        </div>
+        </motion.div>
 
         {/* Mobile Toggle Button */}
         <button className="p-2 md:hidden" onClick={toggleMobileMenu}>
@@ -98,39 +113,39 @@ export default function Navbar() {
             </AnimatePresence>
           </svg>
         </button>
-      </nav>
+      </motion.nav>
 
       {/* Animated Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            animate={{ opacity: 1, height: "auto" }}
-            className="mt-4 space-y-4 overflow-hidden px-4 md:hidden"
-            exit={{ opacity: 0, height: 0 }}
-            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -10 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
             key="mobile-menu"
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="absolute rounded-3xl left-0 right-0 top-full z-50 space-y-2 bg-white px-4 py-4 shadow-md md:hidden"
           >
             <a
-              className="block text-gray-700 transition-colors hover:text-black"
+              className="block text-xl text-gray-700 transition-colors hover:text-black"
               href="#"
             >
               Home
             </a>
             <a
-              className="block text-gray-700 transition-colors hover:text-black"
+              className="block text-xl text-gray-700 transition-colors hover:text-black"
               href="#"
             >
               Docs
             </a>
             <a
-              className="block text-gray-700 transition-colors hover:text-black"
+              className="block text-xl text-gray-700 transition-colors hover:text-black"
               href="#"
             >
               Pricing
             </a>
             <a
-              className="block text-gray-700 transition-colors hover:text-black"
+              className="block text-xl text-gray-700 transition-colors hover:text-black"
               href="#"
             >
               Contact

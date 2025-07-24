@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
-import "../../../styles.css";
 
 export interface FAQItem {
   id: number;
@@ -18,7 +17,7 @@ export const FAQAccordion = ({ items }: { items: FAQItem[] }) => {
 
   return (
     <div style={{ maxWidth: "640px", margin: "0 auto" }}>
-      {items.map((item, index) => (
+      {items.map((item) => (
         <motion.div key={item.id}>
           <motion.div
             layout
@@ -55,7 +54,7 @@ export const FAQAccordion = ({ items }: { items: FAQItem[] }) => {
                   fontSize: "18px",
                   fontWeight: 500,
                   paddingRight: "16px",
-                  color: "black",
+                  color: "white",
                 }}
               >
                 {item.question}
@@ -70,8 +69,8 @@ export const FAQAccordion = ({ items }: { items: FAQItem[] }) => {
                   alignItems: "center",
                   justifyContent: "center",
                   borderRadius: "9999px",
-                  backgroundColor: "white", // gold glow bg
-                  color: "black", // gold
+                  backgroundColor: "white",
+                  color: "black",
                 }}
               >
                 {activeId === item.id ? (

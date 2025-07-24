@@ -1,21 +1,42 @@
+"use client";
+
+import { motion } from "framer-motion";
 import ArrowLeft from "../../../../assets/svgs/LeftArrow";
 import ArrowRight from "../../../../assets/svgs/RightArrow";
 import { AnimatedButton, OutLinedButton } from "../../../../components";
 
 const HeroCTA = () => (
   <div className="mb-16 flex flex-col items-center justify-center gap-6 sm:flex-row">
-    <div className="hidden lg:block">
+    {/* Animate Arrow Left */}
+    <motion.div
+      className="hidden lg:block"
+      initial={{ x: -100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <ArrowLeft />
-    </div>
+    </motion.div>
 
-    <div className="flex items-center justify-center gap-2 sm:gap-[12px]">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+      className="flex items-center justify-center gap-2 sm:gap-[12px]"
+    >
       <AnimatedButton titleOne="Explore Components" titleTwo="Get Started" />
       <OutLinedButton>View Docs</OutLinedButton>
-    </div>
+    </motion.div>
 
-    <div className="hidden lg:block">
+    {/* Animate Arrow Right */}
+    <motion.div
+      className="hidden lg:block"
+      initial={{ x: 100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <ArrowRight />
-    </div>
+    </motion.div>
   </div>
 );
+
 export default HeroCTA;

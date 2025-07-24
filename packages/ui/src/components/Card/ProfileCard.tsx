@@ -35,9 +35,8 @@ export function ContactCard() {
             display: "flex",
             height: isMobile ? "150px" : "199px",
             borderRadius: "16px",
-            background: "radial-gradient(circle at center, #FFA07A, #BA86FC)", // fallback gradient
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?fit=crop&w=800)", // you can replace with your own
+            background: "radial-gradient(circle at center, #FFA07A, #BA86FC)",
+            backgroundImage: "url(/shoes.webp)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             position: "relative",
@@ -58,8 +57,7 @@ export function ContactCard() {
               height: isMobile ? "60px" : "80px",
               borderRadius: "1000px",
               border: "3.5px solid #FFF",
-              background:
-                "url(https://ik.imagekit.io/3ntksnet2/Character%20Concept%20Pin.jpeg?updatedAt=1753187958813) center/cover no-repeat",
+              background: "url(/profilepicture.webp) center/cover no-repeat",
               boxShadow: "6px 6px 15px 0px rgba(120, 132, 149, 0.15)",
             }}
           />

@@ -13,13 +13,14 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "ZentoUI",
-  description: "ZentoUI - a modern component library",
+  description:
+    "ZentoUI is a modern, responsive React component library built for sleek and fast web interfaces. It offers beautifully designed, accessible, and customizable UI elements for effortless development.",
   openGraph: {
     title: "ZentoUI - a modern component library",
     description: "ZentoUI - a modern component library",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "ZentoUI Open Graph Image",
@@ -34,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
