@@ -1,7 +1,8 @@
-import { X } from "lucide-react";
+import {} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { DOC_ROUTES } from "../../constants/icons/route";
+import { DOC_ROUTES } from "../../constants/route";
+import X from "../../constants/icons/XLogo";
 
 export default function Footer() {
   return (
@@ -24,9 +25,15 @@ export default function Footer() {
               @s_pratibhan
             </Link>
           </p>
-          <button className="rounded-md cursor-pointer bg-black/5 px-4 py-2 text-sm transition hover:bg-black/10">
-            Share Your Thoughts On <X className="ml-1 inline-block h-4 w-4" />
-          </button>
+          <Link
+            href={
+              "https://x.com/intent/tweet?text=I%27ve%20been%20using%20%23ZentoUI%20%E2%80%94%20share%20your%20thoughts%20%40s_pratibhan"
+            }
+          >
+            <button className="flex gap-2 rounded-md cursor-pointer bg-black/5 px-4 py-2 text-sm transition hover:bg-black/10">
+              Share Your Thoughts On <X />
+            </button>
+          </Link>
           <p className="text-neutral-500 text-xs">
             © 2025 ZentoUI. All rights reserved.
           </p>
@@ -44,9 +51,6 @@ export default function Footer() {
             </li>
             <li>
               <Link href={DOC_ROUTES.THEMES}>Themes</Link>
-            </li>
-            <li>
-              <Link href={DOC_ROUTES.PRICING}>Pricing</Link>
             </li>
           </ul>
         </div>

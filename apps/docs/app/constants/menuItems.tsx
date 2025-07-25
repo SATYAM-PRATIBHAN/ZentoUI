@@ -39,7 +39,11 @@ export const menuItems = [
     label: "Sections",
     icon: <Box strokeWidth={1} className="w-5 h-5" />,
     hasSubmenu: true,
-    submenu: [{ label: "Feature" }, { label: "Hero" }],
+    submenu: [
+      { label: "Feature" },
+      { label: "Hero" },
+      { label: "Pricing", link: "/docs/sections/pricing" },
+    ],
   },
   {
     id: "resources",

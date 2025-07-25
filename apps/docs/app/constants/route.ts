@@ -21,9 +21,9 @@ export const DOC_ROUTES = {
     },
   },
   THEMES: "/themes",
-  PRICING: "/pricing",
   NOT_FOUND: "/404",
   PRIVACY_POLICY: "/privacy",
+  CUSTOM_COMPONENTS: "/custom-components",
   TERMS_AND_CONDITIONS: "/terms-and-conditions",
 } as const;
 

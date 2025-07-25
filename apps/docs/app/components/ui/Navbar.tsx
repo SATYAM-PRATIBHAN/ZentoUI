@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { OutLinedButton } from "../../components";
 import Link from "next/link";
-import { DOC_ROUTES } from "../../constants/icons/route";
+import { DOC_ROUTES } from "../../constants/route";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,12 +58,6 @@ export default function Navbar() {
             href={DOC_ROUTES.DOCS.ROOT}
           >
             Docs
-          </Link>
-          <Link
-            className="text-gray-600 transition-colors hover:text-black"
-            href={DOC_ROUTES.PRICING}
-          >
-            Pricing
           </Link>
           <OutLinedButton className="flex items-center gap-2 lg:px-4 lg:py-[4px]">
             <Github className="h-4 w-4" />

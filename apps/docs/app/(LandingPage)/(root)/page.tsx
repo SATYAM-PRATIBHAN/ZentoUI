@@ -1,4 +1,5 @@
 "use client";
+
 import { CTA, FeatureSection, Hero } from "../components";
 
 export default function Home() {

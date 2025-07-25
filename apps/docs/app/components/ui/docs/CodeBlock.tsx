@@ -1,4 +1,4 @@
-import { Copy, CopyCheck } from "lucide-react";
+import { Copy, Check } from "lucide-react";
 import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -22,21 +22,17 @@ export function CodeBlock({ code, language = "bash" }: CodeBlockProps) {
       <SyntaxHighlighter
         language={language}
         style={oneDark}
-        customStyle={{ margin: 0, padding: "1rem", fontSize: "0.875rem" }}
+        customStyle={{ margin: 0, fontSize: "0.875rem" }}
       >
         {code}
       </SyntaxHighlighter>
 
       <button
         onClick={handleCopy}
-        className="absolute cursor-pointer top-1/2 -translate-y-1/2 right-3 text-gray-200  hover:text-gray-400 transition-colors"
+        className="absolute cursor-pointer top-5 -translate-y-1/2 right-3 text-gray-200  hover:text-gray-400 transition-colors"
         aria-label="Copy to clipboard"
       >
-        {copied ? (
-          <CopyCheck className="w-4 h-4" />
-        ) : (
-          <Copy className="w-4 h-4" />
-        )}
+        {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
       </button>
     </div>
   );

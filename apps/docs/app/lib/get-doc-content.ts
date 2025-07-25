@@ -12,12 +12,14 @@ import Introduction from "./data/introduction";
 import Installation from "./data/installation";
 import Usage from "./data/usage";
 import Configuration from "./data/configuration";
+import PricingSection from "./data/sections/pricing";
 
 export const docs: Record<string, DocContent> = {
   introduction: Introduction,
   installation: Installation,
   usage: Usage,
   configuration: Configuration,
+  "sections/pricing": PricingSection,
   // "components/button": button,
   // "components/accordion": accordion,
 };

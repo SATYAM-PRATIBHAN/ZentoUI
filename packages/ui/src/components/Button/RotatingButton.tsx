@@ -35,7 +35,7 @@ export const RotatingButton: React.FC<RotatingButtonProps> = ({
         gap: "0.5rem",
         borderRadius: "0.5rem",
         backgroundColor: "black",
-        padding: "0.625rem 1.25rem",
+        padding: "0.8rem 1.25rem",
         color: "white",
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
         transition: "all 300ms ease-in-out",
