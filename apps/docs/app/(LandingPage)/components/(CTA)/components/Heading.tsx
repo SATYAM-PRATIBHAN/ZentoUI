@@ -13,7 +13,7 @@ export default function Heading() {
 
       <p className="mx-auto mb-10 max-w-2xl text-lg text-purple-100/80 leading-relaxed">
         ZentoUI gives you ready-made, accessible components so you can skip the
-        boilerplate and ship faster — with style.
+        boilerplate and ship faster with style.
       </p>
     </div>
   );

@@ -19,6 +19,7 @@ const HeroText = () => (
           height={40}
           className="inline-block w-6 h-6 sm:w-10 sm:h-10 lg:w-18 lg:h-18 mx-1"
           alt="Shape-1"
+          priority
         />
       </span>{" "}
       with Speed <br />
@@ -30,6 +31,7 @@ const HeroText = () => (
           height={40}
           className="inline-block w-6 h-6 sm:w-10 sm:h-10 lg:w-18 lg:h-18 mx-1"
           alt="Shape-2"
+          priority
         />
       </span>{" "}
       with Confidence{" "}
@@ -40,6 +42,7 @@ const HeroText = () => (
           height={40}
           className="inline-block w-6 h-6 sm:w-10 sm:h-10 lg:w-18 lg:h-18 mx-1"
           alt="Shape-3"
+          priority
         />
       </span>
     </h1>

@@ -19,7 +19,7 @@ export default function Sidebar() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="w-full flex items-center px-3 py-2 text-left text-gray-700 hover:bg-gray-100 rounded-lg transition-colors duration-150">
+            <div className="w-full flex items-center px-3 py-2 text-left text-gray-700 rounded-lg">
               <div className="flex items-center space-x-3">
                 <span className="text-gray-500">{item.icon}</span>
                 <span className="font-medium">{item.label}</span>
@@ -50,10 +50,10 @@ export default function Sidebar() {
                       </motion.span>
                       {"badge" in subItem && subItem.badge && (
                         <span
-                          className={`px-2 py-1 text-xs font-medium rounded-full ${
+                          className={`px-1.5 py-0.5 text-xs font-medium rounded-full ${
                             subItem.badge === "5"
                               ? "bg-orange-200 text-orange-800"
-                              : "bg-green-200 text-green-800"
+                              : "text-black bg-lime-400 rounded-full"
                           }`}
                         >
                           {subItem.badge}

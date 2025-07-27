@@ -1,4 +1,4 @@
-import { NeumorphismButton } from "@repo/ui";
+import { NeumorphismButton } from "zento-ui";
 import type React from "react";
 
 export default function NeumorphButton({

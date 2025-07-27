@@ -1,4 +1,4 @@
-export function GlowCard() {
+export function GlowCard({ children }: { children?: React.ReactNode }) {
   const styles = {
     container: {
       display: "flex",
@@ -61,15 +61,22 @@ export function GlowCard() {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <a
-          href="https://x.com/s_pratibhan"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/profilepicture.webp" alt="Profile" style={styles.image} />
-        </a>
-
-        <h2 style={styles.title}>Cosmic Card</h2>
+        {children || (
+          <>
+            <a
+              href="https://x.com/s_pratibhan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/profilepicture.webp"
+                alt="Profile"
+                style={styles.image}
+              />
+            </a>
+            <h2 style={styles.title}>Cosmic Card</h2>
+          </>
+        )}
       </div>
     </div>
   );

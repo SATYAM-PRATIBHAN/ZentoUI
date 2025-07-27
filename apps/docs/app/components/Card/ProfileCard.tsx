@@ -1,4 +1,4 @@
-import { ContactCard } from "@repo/ui";
+import { ContactCard } from "zento-ui";
 
 export default function ProfileCard() {
   return (

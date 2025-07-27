@@ -5,64 +5,76 @@ const Installation: DocContent = {
   title: "Component Library Documentation",
   description: "Getting Started",
   content: (
-    <div className="">
+    <div>
       <div className="max-w-5xl mx-auto">
         <div className="space-y-8">
+          {/* Intro */}
           <section>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Welcome to our component library! This documentation will help you
-              get started with using our components in your projects. Our
-              library is designed to be flexible, accessible, and easy to
-              integrate.
+              Welcome to our component library! This guide will help you set up
+              a new Next.js project and integrate our components. Our library is
+              designed for modern React apps, offering flexibility,
+              accessibility, and theming out of the box.
             </p>
           </section>
 
+          {/* Create Project */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4">Installation</h2>
-            <CodeBlock
-              language="bash"
-              code="npm install @your-org/component-library"
-            />
-            <p className="text-gray-600 mt-3">
-              After installation, you can import components directly into your
-              React application.
+            <h2 className="text-2xl font-semibold mb-4">
+              Initialize a Next.js Project
+            </h2>
+            <p className="text-gray-600 mb-3">
+              If you haven&apos;t created a Next.js app yet, start with the
+              following command:
             </p>
-          </section>
+            <CodeBlock language="bash" code="npx create-next-app@latest" />
 
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Usage</h2>
-            <p className="text-gray-600 mb-4">
-              Import the components you need and start building amazing user
-              interfaces. Each component comes with comprehensive documentation
-              and examples.
+            <p className="text-gray-600 mt-4 mb-2 font-medium">
+              Recommended Setup Options:
             </p>
-            <CodeBlock
-              code="import { Button, Card } from '@your-org/component-library'"
-              language="tsx"
-            />
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold mb-4">Features</h2>
-            <ul className="space-y-2 text-gray-600">
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Fully responsive components
+            <ul className="text-gray-600 list-disc list-inside space-y-1">
+              <li>
+                ✔ Project Name: <strong>my-app</strong> (your wish)
               </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Accessibility-first design
+              <li>
+                ✔ TypeScript: <strong>Yes</strong>
               </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Customizable themes
+              <li>
+                ✔ ESLint: <strong>Yes</strong> (optional but recommended)
               </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                TypeScript support
+              <li>
+                ✔ Tailwind CSS: <strong>Yes</strong>
               </li>
+              <li>✘ `src/` directory: (it&apos;s your choise)</li>
+              <li>
+                ✔ App Router (recommended): <strong>Yes</strong>
+              </li>
+              <li>✘ Import alias: optional, based on your preference</li>
             </ul>
           </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">Start Your Project</h2>
+            <CodeBlock code={`cd my-app\nnpm run dev`} />
+            <p className="text-gray-600 mt-3">
+              Now you can visit the http://localhost:3000 (on any browser) 
+              for your project rendering.
+            </p>
+          </section>
+
+          {/* Install Component Library */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">
+              Install the Component Library
+            </h2>
+            <CodeBlock code="npm install @your-org/component-library" />
+            <p className="text-gray-600 mt-3">
+              Once installed, you&apos;re ready to start using components in
+              your project.
+            </p>
+          </section>
+
+          {/* Features Summary */}
         </div>
       </div>
     </div>

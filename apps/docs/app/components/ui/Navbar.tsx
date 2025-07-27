@@ -1,12 +1,12 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Github } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { OutLinedButton } from "../../components";
 import Link from "next/link";
 import { DOC_ROUTES } from "../../constants/route";
+import Github from "../../constants/icons/GithubLogo";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,7 +60,7 @@ export default function Navbar() {
             Docs
           </Link>
           <OutLinedButton className="flex items-center gap-2 lg:px-4 lg:py-[4px]">
-            <Github className="h-4 w-4" />
+            <Github />
             <Link href={"https://github.com/SATYAM-PRATIBHAN/ZentoUI"}>
               Star on Github
             </Link>

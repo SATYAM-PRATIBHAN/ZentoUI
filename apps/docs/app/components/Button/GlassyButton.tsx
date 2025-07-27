@@ -1,4 +1,4 @@
-import { GlassyButton } from "@repo/ui";
+import { GlassyButton } from "zento-ui";
 
 export default function GlassButton() {
   return (

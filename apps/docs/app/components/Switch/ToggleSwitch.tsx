@@ -1,4 +1,4 @@
-import { ToggleButton } from "@repo/ui";
+import { ToggleButton } from "zento-ui";
 
 export default function Toggle() {
   return (

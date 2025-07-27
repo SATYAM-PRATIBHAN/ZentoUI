@@ -4,6 +4,8 @@ import { use } from "react";
 import { notFound } from "next/navigation";
 import { getDocBySlug } from "../../lib/get-doc-content";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { getFlattenedDocLinks } from "../../utils/flattenMenuItems";
 
 type PageProps = {
   params: Promise<{ slug: string[] }>;
@@ -11,10 +13,21 @@ type PageProps = {
 
 export default function DocPage({ params }: PageProps) {
   const { slug } = use(params);
-
   const doc = getDocBySlug(slug);
 
   if (!doc) return notFound();
+
+  const flattenedLinks = getFlattenedDocLinks();
+  const currentPath = "/docs/" + slug.join("/");
+  const currentIndex = flattenedLinks.findIndex(
+    (item) => item.link === currentPath,
+  );
+
+  const prev = currentIndex > 0 ? flattenedLinks[currentIndex - 1] : null;
+  const next =
+    currentIndex < flattenedLinks.length - 1
+      ? flattenedLinks[currentIndex + 1]
+      : null;
 
   return (
     <motion.div
@@ -48,6 +61,30 @@ export default function DocPage({ params }: PageProps) {
       >
         {doc.content}
       </motion.div>
+
+      <div className="mt-16 flex justify-between items-center">
+        {prev ? (
+          <Link
+            href={prev.link}
+            className="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+          >
+            ← {prev.label}
+          </Link>
+        ) : (
+          <div />
+        )}
+
+        {next ? (
+          <Link
+            href={next.link}
+            className="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+          >
+            {next.label} →
+          </Link>
+        ) : (
+          <div />
+        )}
+      </div>
     </motion.div>
   );
 }

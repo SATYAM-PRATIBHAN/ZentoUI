@@ -1,8 +1,8 @@
-import { FAQAccordion, type FAQItem } from "@repo/ui";
+import { FAQAccordion, type FAQItem } from "zento-ui";
 
 const faqData: FAQItem[] = [
   {
-    id: 2,
+    id: 1,
     question: "Like the Design?",
     answer:
       "Still thinking of a design, just use it the ZentoUI components already.",
@@ -11,9 +11,5 @@ const faqData: FAQItem[] = [
 ];
 
 export default function FAQ({ data }: { data?: FAQItem[] }) {
-  return (
-    <section>
-      <FAQAccordion items={data || faqData} />
-    </section>
-  );
+  return <FAQAccordion items={data || faqData} />;
 }

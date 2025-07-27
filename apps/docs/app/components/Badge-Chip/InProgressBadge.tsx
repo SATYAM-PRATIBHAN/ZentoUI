@@ -1,4 +1,4 @@
-import { InProgressBadge } from "@repo/ui";
+import { InProgressBadge } from "zento-ui";
 
 export default function InProgressChip() {
   return (

@@ -17,7 +17,7 @@ export const FAQAccordion = ({ items }: { items: FAQItem[] }) => {
   };
 
   return (
-    <div style={{ maxWidth: "640px", margin: "0 auto" }}>
+    <div style={{ width: "100%" }}>
       {items.map((item) => (
         <motion.div key={item.id}>
           <motion.div
@@ -55,7 +55,7 @@ export const FAQAccordion = ({ items }: { items: FAQItem[] }) => {
                   fontSize: "18px",
                   fontWeight: 500,
                   paddingRight: "16px",
-                  color: "white",
+                  color: "black",
                 }}
               >
                 {item.question}

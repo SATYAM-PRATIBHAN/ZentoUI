@@ -41,7 +41,7 @@ export default function Footer() {
 
         {/* Pages */}
         <div>
-          <h4 className="mb-2 font-semibold text-sm">Pages</h4>
+          <h1 className="mb-2 font-semibold text-sm">Pages</h1>
           <ul className="space-y-1 text-neutral-500 text-sm">
             <li>
               <Link href={DOC_ROUTES.HOME}>Home</Link>
@@ -57,7 +57,7 @@ export default function Footer() {
 
         {/* Socials */}
         <div>
-          <h4 className="mb-2 font-semibold text-sm">Socials</h4>
+          <h1 className="mb-2 font-semibold text-sm">Socials</h1>
           <ul className="space-y-1 text-neutral-500 text-sm">
             <li>
               <Link href={DOC_ROUTES.SOCIAL.GITHUB}>Github</Link>
@@ -73,7 +73,7 @@ export default function Footer() {
 
         {/* Legal */}
         <div>
-          <h4 className="mb-2 font-semibold text-sm">Legal</h4>
+          <h1 className="mb-2 font-semibold text-sm">Legal</h1>
           <ul className="space-y-1 text-neutral-500 text-sm">
             <li>
               <Link href={DOC_ROUTES.PRIVACY_POLICY}>Privacy Policy</Link>

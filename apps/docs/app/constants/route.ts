@@ -7,9 +7,10 @@ export const DOC_ROUTES = {
   HOME: "/",
   DOCS: {
     ROOT: "/docs",
-    GETTING_STARTED: "/docs/getting-started",
+    INTRODUCTION: "/docs/introduction",
+    INSTALLATION: "/docs/installation",
+    USAGE: "/docs/usage",
     COMPONENTS: {
-      ROOT: "/docs/components",
       BUTTON: "/docs/components/button",
       INPUT: "/docs/components/input",
       CARD: "/docs/components/card",
@@ -19,9 +20,13 @@ export const DOC_ROUTES = {
       TOAST: "/docs/components/toast",
       ACCORDION: "/docs/components/accordion",
     },
+    SECTION: {
+      PRICING: "/docs/sections/pricing",
+      HERO: "/docs/sections/home",
+      FEATURES: "/docs/sections/features",
+    },
   },
   THEMES: "/themes",
-  NOT_FOUND: "/404",
   PRIVACY_POLICY: "/privacy",
   CUSTOM_COMPONENTS: "/custom-components",
   TERMS_AND_CONDITIONS: "/terms-and-conditions",

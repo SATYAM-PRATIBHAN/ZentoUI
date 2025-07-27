@@ -11,7 +11,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
+    "zento-ui": "workspace:*",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/react-syntax-highlighter": "^15.5.13",
     "clsx": "^2.1.1",

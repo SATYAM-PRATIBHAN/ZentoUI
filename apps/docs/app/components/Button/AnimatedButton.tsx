@@ -1,4 +1,4 @@
-import { RotatingButton } from "@repo/ui";
+import { RotatingButton } from "zento-ui";
 
 interface ButtonProps {
   titleOne?: string;

@@ -1,7 +1,8 @@
 import React from "react";
 import { MenuItem } from "./types/MenuItem";
-import { Box, LibraryBig, ListPlus } from "lucide-react";
+import { Box, LibraryBig } from "lucide-react";
 import { GettingStarted } from "./icons/GettingStarted";
+import { DOC_ROUTES } from "./route";
 
 export type MenuItems = MenuItem[];
 
@@ -12,10 +13,9 @@ export const menuItems = [
     icon: <GettingStarted />,
     hasSubmenu: true,
     submenu: [
-      { label: "Introduction", link: "/docs/introduction" },
-      { label: "Installation", link: "/docs/installation" },
-      { label: "Configuration", link: "/docs/configuration" },
-      { label: "Usage", link: "/docs/usage" },
+      { label: "Introduction", link: `${DOC_ROUTES.DOCS.INTRODUCTION}` },
+      { label: "Installation", link: `${DOC_ROUTES.DOCS.INSTALLATION}` },
+      { label: "Usage", link: `${DOC_ROUTES.DOCS.USAGE}` },
     ],
   },
   {
@@ -25,12 +25,12 @@ export const menuItems = [
     hasSubmenu: true,
     submenu: [
       { label: "Accordion" },
-      { label: "Badge/Chip", badge: "new" },
+      { label: "Badge/Chip" },
       { label: "Button" },
-      { label: "Card", badge: "new" },
+      { label: "Card" },
       { label: "Input/Field" },
       { label: "Modal" },
-      { label: "Switch", badge: "new" },
+      { label: "Switch", badge: "New" },
       { label: "Toast/Alert" },
     ],
   },
@@ -42,13 +42,7 @@ export const menuItems = [
     submenu: [
       { label: "Feature" },
       { label: "Hero" },
-      { label: "Pricing", link: "/docs/sections/pricing" },
+      { label: "Pricing", link: `${DOC_ROUTES.DOCS.SECTION.PRICING}` },
     ],
-  },
-  {
-    id: "resources",
-    label: "Resources",
-    icon: <ListPlus strokeWidth={1} className="h-5 w-5" />,
-    hasSubmenu: false,
   },
 ];
