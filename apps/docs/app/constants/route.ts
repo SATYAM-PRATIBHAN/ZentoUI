@@ -3,6 +3,7 @@ export const DOC_ROUTES = {
     GITHUB: "https://github.com/SATYAM-PRATIBHAN/ZentoUI",
     LINKEDIN: "https://www.linkedin.com/in/satyampratibhan/",
     X: "https://x.com/s_pratibhan",
+    X_POST: "https://x.com/intent/tweet?text=I%27ve%20been%20using%20%23ZentoUI%20%E2%80%94%20share%20your%20thoughts%20%40s_pratibhan" 
   },
   HOME: "/",
   DOCS: {

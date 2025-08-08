@@ -59,9 +59,15 @@ export default function Navbar() {
           >
             Docs
           </Link>
+          <Link
+            className="text-gray-600 transition-colors hover:text-black"
+            href={DOC_ROUTES.THEMES}
+          >
+            Themes
+          </Link>
           <OutLinedButton className="flex items-center gap-2 lg:px-4 lg:py-[4px]">
             <Github />
-            <Link href={"https://github.com/SATYAM-PRATIBHAN/ZentoUI"}>
+            <Link href={DOC_ROUTES.SOCIAL.GITHUB}>
               Star on Github
             </Link>
           </OutLinedButton>

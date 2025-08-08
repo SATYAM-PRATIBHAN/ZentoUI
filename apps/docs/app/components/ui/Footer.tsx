@@ -25,11 +25,7 @@ export default function Footer() {
               @s_pratibhan
             </Link>
           </p>
-          <Link
-            href={
-              "https://x.com/intent/tweet?text=I%27ve%20been%20using%20%23ZentoUI%20%E2%80%94%20share%20your%20thoughts%20%40s_pratibhan"
-            }
-          >
+          <Link href={DOC_ROUTES.SOCIAL.X_POST}>
             <button className="flex gap-2 rounded-md cursor-pointer bg-black/5 px-4 py-2 text-sm transition hover:bg-black/10">
               Share Your Thoughts On <X />
             </button>

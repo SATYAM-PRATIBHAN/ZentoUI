@@ -67,7 +67,7 @@ const Installation: DocContent = {
             <h2 className="text-2xl font-semibold mb-4">
               Install the Component Library
             </h2>
-            <CodeBlock code="npm install @your-org/component-library" />
+            <CodeBlock code="npm install @satyampratibhan/zento-ui" />
             <p className="text-gray-600 mt-3">
               Once installed, you&apos;re ready to start using components in
               your project.

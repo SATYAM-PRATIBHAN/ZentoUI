@@ -27,7 +27,7 @@ const Usage: DocContent = {
               components:
             </p>
             <CodeBlock
-              code={`import { Button, Card } from '@your-org/component-library';`}
+              code={`import { Button, Card } from '@satyampratibhan/zento-ui';`}
               language="tsx"
             />
           </section>

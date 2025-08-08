@@ -5,7 +5,7 @@ const faqData: FAQItem[] = [
     id: 1,
     question: "Like the Design?",
     answer:
-      "Still thinking of a design, just use it the ZentoUI components already.",
+      "Still thinking of a design, just use the ZentoUI components already.",
   },
   // ... add others
 ];
