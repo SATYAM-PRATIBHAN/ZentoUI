@@ -1,4 +1,4 @@
-import { OnlineBadge } from "zento-ui";
+import { OnlineBadge } from "@satyampratibhan/zento-ui";
 
 export default function OnlineChip() {
   return (

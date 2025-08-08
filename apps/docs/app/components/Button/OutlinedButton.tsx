@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "zento-ui";
+import { Button } from "@satyampratibhan/zento-ui";
 import { cn } from "../../lib/utils";
 
 interface ButtonProp {

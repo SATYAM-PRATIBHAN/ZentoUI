@@ -57,8 +57,8 @@ const Installation: DocContent = {
             <h2 className="text-2xl font-semibold mb-4">Start Your Project</h2>
             <CodeBlock code={`cd my-app\nnpm run dev`} />
             <p className="text-gray-600 mt-3">
-              Now you can visit the http://localhost:3000 (on any browser) 
-              for your project rendering.
+              Now you can visit the http://localhost:3000 (on any browser) for
+              your project rendering.
             </p>
           </section>
 

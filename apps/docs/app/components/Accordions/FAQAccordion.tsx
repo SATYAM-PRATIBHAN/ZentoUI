@@ -1,4 +1,4 @@
-import { FAQAccordion, type FAQItem } from "zento-ui";
+import { FAQAccordion, type FAQItem } from "@satyampratibhan/zento-ui";
 
 const faqData: FAQItem[] = [
   {

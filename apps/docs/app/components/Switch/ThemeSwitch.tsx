@@ -1,4 +1,4 @@
-import { ThemeSwitch } from "zento-ui";
+import { ThemeSwitch } from "@satyampratibhan/zento-ui";
 
 export default function ThemeSelector() {
   return (

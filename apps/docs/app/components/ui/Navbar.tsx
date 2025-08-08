@@ -67,9 +67,7 @@ export default function Navbar() {
           </Link>
           <OutLinedButton className="flex items-center gap-2 lg:px-4 lg:py-[4px]">
             <Github />
-            <Link href={DOC_ROUTES.SOCIAL.GITHUB}>
-              Star on Github
-            </Link>
+            <Link href={DOC_ROUTES.SOCIAL.GITHUB}>Star on Github</Link>
           </OutLinedButton>
         </motion.div>
 

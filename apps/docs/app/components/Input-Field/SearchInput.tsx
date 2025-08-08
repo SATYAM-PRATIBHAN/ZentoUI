@@ -1,4 +1,4 @@
-import { SearchInput } from "zento-ui";
+import { SearchInput } from "@satyampratibhan/zento-ui";
 
 export default function SearchField() {
   return (

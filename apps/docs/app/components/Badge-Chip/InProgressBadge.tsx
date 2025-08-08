@@ -1,4 +1,4 @@
-import { InProgressBadge } from "zento-ui";
+import { InProgressBadge } from "@satyampratibhan/zento-ui";
 
 export default function InProgressChip() {
   return (

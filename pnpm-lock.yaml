@@ -23,6 +23,9 @@ importers:
 
   apps/docs:
     dependencies:
+      '@satyampratibhan/zento-ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       '@tailwindcss/postcss':
         specifier: ^4.1.11
         version: 4.1.11
@@ -65,9 +68,6 @@ importers:
       tailwindcss:
         specifier: ^4.1.11
         version: 4.1.11
-      zento-ui:
-        specifier: workspace:*
-        version: link:../..
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*

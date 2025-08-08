@@ -1,4 +1,4 @@
-import { ToggleButton } from "zento-ui";
+import { ToggleButton } from "@satyampratibhan/zento-ui";
 
 export default function Toggle() {
   return (

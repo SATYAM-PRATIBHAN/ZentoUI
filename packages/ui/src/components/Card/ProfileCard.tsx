@@ -95,8 +95,7 @@ export function ContactCard() {
             margin: 0,
           }}
         >
-          UI Designer at{" "}
-          <span style={{ color: "#161619" }}>@ZentoUI</span>
+          UI Designer at <span style={{ color: "#161619" }}>@ZentoUI</span>
         </p>
       </div>
 

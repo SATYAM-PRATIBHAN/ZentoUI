@@ -1,4 +1,4 @@
-import { GlowCard } from "zento-ui";
+import { GlowCard } from "@satyampratibhan/zento-ui";
 
 export default function GlowingCard() {
   return (
