@@ -13,41 +13,40 @@ export function GlassyButton({
 
   return (
     <div
-    style={{
-      display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "center",
-      gap: "1rem",
-    }}
-    >
-      <button
-      onClick={onClick}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       style={{
-        borderRadius: "15px",
-        border: isHovered
-          ? "1px solid rgba(255,255,255,0.4)"
-          : "1px solid transparent",
-        background: "white",
-        boxShadow: isHovered
-          ? "3px 4px 15px rgba(165, 86, 251, 0.35)"
-          : "3px 4px 11.1px rgba(165, 86, 251, 0.23)",
-        width: "116px",
-        height: "50px",
-        color: "black",
-        cursor: "pointer",
-        fontSize: "16px",
-        fontWeight: "500",
-        backdropFilter: "blur(10px)",
-        WebkitBackdropFilter: "blur(10px)",
-        transition: "all 0.25s ease-in-out",
-        transform: isHovered ? "scale(1.05)" : "scale(1)",
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: "1rem",
       }}
     >
-      {children}
-    </button>
+      <button
+        onClick={onClick}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        style={{
+          borderRadius: "15px",
+          border: isHovered
+            ? "1px solid rgba(255,255,255,0.4)"
+            : "1px solid transparent",
+          background: "white",
+          boxShadow: isHovered
+            ? "3px 4px 15px rgba(165, 86, 251, 0.35)"
+            : "3px 4px 11.1px rgba(165, 86, 251, 0.23)",
+          width: "116px",
+          height: "50px",
+          color: "black",
+          cursor: "pointer",
+          fontSize: "16px",
+          fontWeight: "500",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+          transition: "all 0.25s ease-in-out",
+          transform: isHovered ? "scale(1.05)" : "scale(1)",
+        }}
+      >
+        {children}
+      </button>
     </div>
-    
   );
 }

@@ -6,18 +6,17 @@ type ButtonProps = {
 
 export function Button({ className, children, onClick }: ButtonProps) {
   return (
-    <div 
-    style={{
-      display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "center",
-      gap: "1rem",
-    }}
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: "1rem",
+      }}
     >
-      <button onClick={onClick} className={className} >
-      {children}
-    </button>
+      <button onClick={onClick} className={className}>
+        {children}
+      </button>
     </div>
-    
   );
 }
