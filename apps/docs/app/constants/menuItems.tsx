@@ -26,7 +26,7 @@ export const menuItems = [
     submenu: [
       { label: "Accordion" },
       { label: "Badge/Chip" },
-      { label: "Button" },
+      { label: "Button", link: `${DOC_ROUTES.DOCS.COMPONENTS.BUTTON}` },
       { label: "Card" },
       { label: "Input/Field" },
       { label: "Modal" },

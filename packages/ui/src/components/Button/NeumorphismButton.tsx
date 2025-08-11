@@ -25,7 +25,15 @@ export const NeumorphismButton = ({
   };
 
   return (
-    <button
+    <div 
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      gap: "1rem",
+    }}
+    >
+      <button
       onBlur={() => setIsFocused(false)}
       onFocus={() => setIsFocused(true)}
       onMouseEnter={() => setIsHovered(true)}
@@ -34,5 +42,7 @@ export const NeumorphismButton = ({
     >
       {children || "Press me"}
     </button>
+    </div>
+    
   );
 };

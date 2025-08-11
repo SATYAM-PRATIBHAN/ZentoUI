@@ -1,4 +1,4 @@
-import { FAQItem } from "@repo/ui";
+import { FAQItem } from "@satyampratibhan/zento-ui";
 import { FAQ } from "../../components";
 import Github from "../../constants/icons/GithubLogo";
 import type { DocContent } from "../get-doc-content";

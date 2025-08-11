@@ -6,13 +6,21 @@ export function GlassyButton({
   children = "Get Started",
   onClick,
 }: {
-  children?: string;
+  children?: React.ReactNode;
   onClick?: () => void;
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <button
+    <div
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      gap: "1rem",
+    }}
+    >
+      <button
       onClick={onClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -39,5 +47,7 @@ export function GlassyButton({
     >
       {children}
     </button>
+    </div>
+    
   );
 }
