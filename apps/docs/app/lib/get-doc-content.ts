@@ -1,4 +1,3 @@
-// src/lib/docs/get-doc-content.tsx
 import type React from "react";
 
 export interface DocContent {
@@ -13,6 +12,8 @@ import Installation from "./data/installation";
 import Usage from "./data/usage";
 import PricingSection from "./data/sections/pricing";
 import ButtonDocs from "./data/components/button";
+import AccordionDocs from "./data/components/accordion";
+import InputDocs from "./data/components/input";
 
 export const docs: Record<string, DocContent> = {
   introduction: Introduction,
@@ -20,7 +21,8 @@ export const docs: Record<string, DocContent> = {
   usage: Usage,
   "sections/pricing": PricingSection,
   "components/button": ButtonDocs,
-  // "components/accordion": accordion,
+  "components/accordion": AccordionDocs,
+  "components/input": InputDocs
 };
 
 export function getDocBySlug(slug: string[]): DocContent | null {

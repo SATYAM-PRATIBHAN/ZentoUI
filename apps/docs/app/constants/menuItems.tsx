@@ -24,11 +24,11 @@ export const menuItems = [
     icon: <LibraryBig strokeWidth={1} className="h-5 w-5" />,
     hasSubmenu: true,
     submenu: [
-      { label: "Accordion" },
+      { label: "Accordion", link: `${DOC_ROUTES.DOCS.COMPONENTS.ACCORDION}` },
       { label: "Badge/Chip" },
       { label: "Button", link: `${DOC_ROUTES.DOCS.COMPONENTS.BUTTON}` },
       { label: "Card" },
-      { label: "Input/Field" },
+      { label: "Input/Field", link: `${DOC_ROUTES.DOCS.COMPONENTS.INPUT}` },
       { label: "Modal" },
       { label: "Switch", badge: "New" },
       { label: "Toast/Alert" },

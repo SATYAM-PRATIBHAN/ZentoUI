@@ -1,5 +1,18 @@
-export const SearchInput = () => {
+interface SearchInputProps {
+  placeholder?: string;
+  type?: string;
+}
+
+export const SearchInput = (props: SearchInputProps) => {
   return (
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: "1rem",
+      }}
+    >
     <div
       style={{
         display: "flex",
@@ -12,7 +25,7 @@ export const SearchInput = () => {
       }}
     >
       <input
-        placeholder="Search"
+        placeholder={props.placeholder || "Search"}
         style={{
           border: "none",
           outline: "none",
@@ -25,7 +38,7 @@ export const SearchInput = () => {
           padding: 0,
           width: "clamp(80px, 20vw, 120px)",
         }}
-        type="text"
+        type={props.type || "text"}
       />
       <div
         style={{
@@ -55,6 +68,7 @@ export const SearchInput = () => {
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
         </svg>
       </div>
+    </div>
     </div>
   );
 };

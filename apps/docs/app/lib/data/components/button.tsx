@@ -2,7 +2,6 @@
 
 import { DocContent } from "../../get-doc-content";
 import { PreviewSwitcher } from "../../../components/ui/docs/PreviewSwitcher";
-import { CodeBlock } from "../../../components/ui/docs/CodeBlock";
 import React from "react";
 import {
   Button,
@@ -15,7 +14,7 @@ import {
 const rawButtonCodes = [
   `import { GlassyButton } from "@satyampratibhan/zento-ui";
 
-export default function Example() {
+export default function App() {
   return (
     <div className="flex flex-col gap-4">
       <GlassyButton>
@@ -26,7 +25,7 @@ export default function Example() {
 }`,
   `import { NeumorphismButton } from "@satyampratibhan/zento-ui";
 
-export default function Example() {
+export default function App() {
   return (
     <div className="flex flex-col gap-4">
       <NeumorphismButton>
@@ -37,7 +36,7 @@ export default function Example() {
 }`,
   `import { Button } from "@satyampratibhan/zento-ui";
 
-export default function Example() {
+export default function App() {
   return (
     <div className="flex flex-col gap-4">
       <Button className="px-4 py-2 bg-blue-500 text-white rounded"> // your custom style here
@@ -48,7 +47,7 @@ export default function Example() {
 }`,
   `import { RotatingButton } from "@satyampratibhan/zento-ui";
 
-export default function Example() {
+export default function App() {
   return (
     <div className="flex flex-col gap-4">
       <RotatingButton data={["Book a Call", "Contact us"]} />
