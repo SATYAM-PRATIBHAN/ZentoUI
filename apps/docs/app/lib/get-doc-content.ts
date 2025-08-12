@@ -22,7 +22,7 @@ export const docs: Record<string, DocContent> = {
   "sections/pricing": PricingSection,
   "components/button": ButtonDocs,
   "components/accordion": AccordionDocs,
-  "components/input": InputDocs
+  "components/input": InputDocs,
 };
 
 export function getDocBySlug(slug: string[]): DocContent | null {

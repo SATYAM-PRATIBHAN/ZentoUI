@@ -17,7 +17,7 @@ export default function App() {
   return <FAQAccordion items={faqItems} />;
 };`;
 
-const sampleItems : FAQItem[] = [
+const sampleItems: FAQItem[] = [
   {
     id: 1,
     question: "What is Zento UI?",
@@ -27,8 +27,7 @@ const sampleItems : FAQItem[] = [
   {
     id: 2,
     question: "Is it free to use?",
-    answer:
-      "Yes, Zento UI is free and open-source under the MIT license.",
+    answer: "Yes, Zento UI is free and open-source under the MIT license.",
   },
   {
     id: 3,
@@ -84,9 +83,7 @@ const AccordionDocs: DocContent = {
                   FAQAccordion
                 </td>
                 <td className="border border-gray-300 p-2">items</td>
-                <td className="border border-gray-300 p-2">
-                  FAQItem[]
-                </td>
+                <td className="border border-gray-300 p-2">FAQItem[]</td>
                 <td className="border border-gray-300 p-2">
                   Array of FAQ objects containing <code>id</code>,{" "}
                   <code>question</code>, and <code>answer</code>.
