@@ -45,9 +45,6 @@ export default function Footer() {
             <li>
               <Link href={DOC_ROUTES.DOCS.ROOT}>Docs</Link>
             </li>
-            <li>
-              <Link href={DOC_ROUTES.THEMES}>Themes</Link>
-            </li>
           </ul>
         </div>
 

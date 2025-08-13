@@ -64,16 +64,14 @@ function FeaturesSectionContent() {
     <div className="min-h-screen bg-white py-16 border border-gray-200 rounded-2xl px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Building the Future
-            <br />
-            <span className="text-gray-800">Together</span>
+        <div className="text-center mb-16 px-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">
+            Building the Future <span className="text-gray-700">Together</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Through innovative technology solutions and strategic partnerships,
-            we're transforming how businesses connect, grow, and succeed in the
-            digital age.
+            we’re helping businesses connect, grow, and thrive in the digital
+            age.
           </p>
         </div>
 

@@ -28,7 +28,6 @@ export const DOC_ROUTES = {
       FEATURES: "/docs/sections/features",
     },
   },
-  THEMES: "/themes",
   PRIVACY_POLICY: "/privacy",
   CUSTOM_COMPONENTS: "/custom-components",
   TERMS_AND_CONDITIONS: "/terms-and-conditions",
