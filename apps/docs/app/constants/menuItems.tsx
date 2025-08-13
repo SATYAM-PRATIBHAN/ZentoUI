@@ -44,7 +44,7 @@ export const menuItems = [
     icon: <Box strokeWidth={1} className="w-5 h-5" />,
     hasSubmenu: true,
     submenu: [
-      { label: "Feature" },
+      { label: "Feature" , link: `${DOC_ROUTES.DOCS.SECTION.FEATURES}`},
       { label: "Hero" },
       { label: "Pricing", link: `${DOC_ROUTES.DOCS.SECTION.PRICING}` },
     ],

@@ -17,6 +17,7 @@ import InputDocs from "./data/components/input";
 import SwitchDocs from "./data/components/switch";
 import BadgeDocs from "./data/components/badge";
 import CardDocs from "./data/components/card";
+import FeaturesSection from "./data/sections/features";
 
 export const docs: Record<string, DocContent> = {
   introduction: Introduction,
@@ -29,6 +30,7 @@ export const docs: Record<string, DocContent> = {
   "components/switch": SwitchDocs,
   "components/badge": BadgeDocs,
   "components/card": CardDocs,
+  "sections/features": FeaturesSection
 };
 
 export function getDocBySlug(slug: string[]): DocContent | null {
