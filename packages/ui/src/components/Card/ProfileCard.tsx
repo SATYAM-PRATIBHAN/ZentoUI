@@ -46,8 +46,8 @@ export function ContactCard(props: Props) {
             height: isMobile ? "150px" : "199px",
             borderRadius: "16px",
             background: "radial-gradient(circle at center, #FFA07A, #BA86FC)",
-            backgroundImage: props.bannerImage 
-              ? `url(${props.bannerImage})` 
+            backgroundImage: props.bannerImage
+              ? `url(${props.bannerImage})`
               : "url(/shoes.webp)",
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -130,7 +130,7 @@ export function ContactCard(props: Props) {
           background: "#FFF",
         }}
       >
-        {props.buttonLabel ||"Contact Me"}
+        {props.buttonLabel || "Contact Me"}
       </button>
     </div>
   );

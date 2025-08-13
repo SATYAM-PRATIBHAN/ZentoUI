@@ -30,7 +30,11 @@ export const menuItems = [
       { label: "Card", link: `${DOC_ROUTES.DOCS.COMPONENTS.CARD}` },
       { label: "Input/Field", link: `${DOC_ROUTES.DOCS.COMPONENTS.INPUT}` },
       { label: "Modal" },
-      { label: "Switch", badge: "New", link: `${DOC_ROUTES.DOCS.COMPONENTS.SWITCH}` },
+      {
+        label: "Switch",
+        badge: "New",
+        link: `${DOC_ROUTES.DOCS.COMPONENTS.SWITCH}`,
+      },
       { label: "Toast/Alert" },
     ],
   },

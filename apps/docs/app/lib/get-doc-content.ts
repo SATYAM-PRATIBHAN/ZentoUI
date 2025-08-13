@@ -28,7 +28,7 @@ export const docs: Record<string, DocContent> = {
   "components/input": InputDocs,
   "components/switch": SwitchDocs,
   "components/badge": BadgeDocs,
-  "components/card": CardDocs
+  "components/card": CardDocs,
 };
 
 export function getDocBySlug(slug: string[]): DocContent | null {

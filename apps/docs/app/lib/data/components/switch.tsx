@@ -5,7 +5,8 @@ import { PreviewSwitcher } from "../../../components/ui/docs/PreviewSwitcher";
 import React from "react";
 import { ThemeSwitch, ToggleButton } from "@satyampratibhan/zento-ui";
 
-const rawSwitchCode = [`import { ToggleButton } from "@satyampratibhan/zento-ui";
+const rawSwitchCode = [
+  `import { ToggleButton } from "@satyampratibhan/zento-ui";
 import { useState } from "react";
 
 export default function App() {
@@ -23,7 +24,7 @@ export default function App() {
     />
   );
 };`,
-`import { ThemeSwitch } from "@satyampratibhan/zento-ui";
+  `import { ThemeSwitch } from "@satyampratibhan/zento-ui";
 
 export default function App() {
   const handleThemeChange = (theme: "light" | "dark" | "system") => {
@@ -38,7 +39,8 @@ export default function App() {
       initialTheme="light"
     />
   );
-};`];
+};`,
+];
 
 const SwitchDocs: DocContent = {
   title: "Switch",
@@ -54,7 +56,12 @@ const SwitchDocs: DocContent = {
           without using traditional checkboxes.
         </p>
         <PreviewSwitcher
-          preview={<ToggleButton checkedValue={false} onChange={() => console.log("clicked")} />}
+          preview={
+            <ToggleButton
+              checkedValue={false}
+              onChange={() => console.log("clicked")}
+            />
+          }
           code={rawSwitchCode[0] || ""}
           language="tsx"
         />
@@ -62,10 +69,17 @@ const SwitchDocs: DocContent = {
       <section className="space-y-4">
         <h2 className="text-xl font-semibold text-gray-800">Theme Switch</h2>
         <p>
-          The <code>ThemeSwitch</code> component allows users to easily switch between light, dark, and system themes with animated transitions. It's ideal for providing a user-friendly way to control the application's appearance.
+          The <code>ThemeSwitch</code> component allows users to easily switch
+          between light, dark, and system themes with animated transitions. It's
+          ideal for providing a user-friendly way to control the application's
+          appearance.
         </p>
         <PreviewSwitcher
-          preview={<ThemeSwitch onChange={(theme) => console.log("Theme changed to:", theme)} />}
+          preview={
+            <ThemeSwitch
+              onChange={(theme) => console.log("Theme changed to:", theme)}
+            />
+          }
           code={rawSwitchCode[1] || ""}
           language="tsx"
         />
@@ -99,7 +113,8 @@ const SwitchDocs: DocContent = {
                 <td className="border border-gray-300 p-2">checkedValue</td>
                 <td className="border border-gray-300 p-2">boolean</td>
                 <td className="border border-gray-300 p-2">
-                  Whether the toggle is on (<code>true</code>) or off (<code>false</code>).
+                  Whether the toggle is on (<code>true</code>) or off (
+                  <code>false</code>).
                 </td>
               </tr>
               <tr className="bg-white">

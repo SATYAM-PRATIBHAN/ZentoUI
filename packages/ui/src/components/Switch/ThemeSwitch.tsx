@@ -13,8 +13,13 @@ interface ThemeSwitchProps {
   initialTheme?: "light" | "dark" | "system";
 }
 
-export function ThemeSwitch({ onChange, initialTheme = "light" }: ThemeSwitchProps) {
-  const [active, setActive] = useState<"light" | "dark" | "system">(initialTheme);
+export function ThemeSwitch({
+  onChange,
+  initialTheme = "light",
+}: ThemeSwitchProps) {
+  const [active, setActive] = useState<"light" | "dark" | "system">(
+    initialTheme,
+  );
 
   const options: ("light" | "dark" | "system")[] = ["light", "dark", "system"];
   const activeIndex = options.indexOf(active);
@@ -34,56 +39,56 @@ export function ThemeSwitch({ onChange, initialTheme = "light" }: ThemeSwitchPro
         gap: "1rem",
       }}
     >
-    <div
-      style={{
-        position: "relative",
-        display: "flex",
-        background: "#EAEAEA",
-        padding: "8px",
-        borderRadius: "14px",
-        gap: "10px",
-      }}
-    >
-      {/* Animated background highlight */}
-      <motion.div
-        layout
+      <div
         style={{
-          position: "absolute",
-          top: 6,
-          left: 8 + activeIndex * (buttonWidth + 10), // +gap
-          width: buttonWidth,
-          height: 44,
-          background: "white",
-          borderRadius: "12px",
-          boxShadow: "0px 12px 40px -4px rgba(0, 0, 0, 0.40)",
-          zIndex: 1,
+          position: "relative",
+          display: "flex",
+          background: "#EAEAEA",
+          padding: "8px",
+          borderRadius: "14px",
+          gap: "10px",
         }}
-        transition={{ type: "spring", stiffness: 500, damping: 30 }}
-      />
-
-      {options.map((mode) => (
-        <button
-          key={mode}
-          onClick={() => handleThemeChange(mode)}
-          aria-label={mode[1]}
+      >
+        {/* Animated background highlight */}
+        <motion.div
+          layout
           style={{
-            position: "relative",
-            zIndex: 2,
-            background: "transparent",
-            border: "none",
+            position: "absolute",
+            top: 6,
+            left: 8 + activeIndex * (buttonWidth + 10), // +gap
+            width: buttonWidth,
+            height: 44,
+            background: "white",
             borderRadius: "12px",
-            padding: "10px 12px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            transition: "color 0.2s ease",
+            boxShadow: "0px 12px 40px -4px rgba(0, 0, 0, 0.40)",
+            zIndex: 1,
           }}
-        >
-          {icons[mode][0]}
-        </button>
-      ))}
-    </div>
+          transition={{ type: "spring", stiffness: 500, damping: 30 }}
+        />
+
+        {options.map((mode) => (
+          <button
+            key={mode}
+            onClick={() => handleThemeChange(mode)}
+            aria-label={mode[1]}
+            style={{
+              position: "relative",
+              zIndex: 2,
+              background: "transparent",
+              border: "none",
+              borderRadius: "12px",
+              padding: "10px 12px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              transition: "color 0.2s ease",
+            }}
+          >
+            {icons[mode][0]}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
