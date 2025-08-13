@@ -5,7 +5,7 @@ import ArrowLeft from "../../../../constants/icons/LeftArrow";
 import ArrowRight from "../../../../constants/icons/RightArrow";
 import { AnimatedButton, OutLinedButton } from "../../../../components";
 import Link from "next/link";
-import { DOC_ROUTES } from "../../../../constants/route";
+import { DOC_ROUTES } from "../../../../constants/routes";
 
 const HeroCTA = () => (
   <div className="mb-16 flex flex-col items-center justify-center gap-6 sm:flex-row">

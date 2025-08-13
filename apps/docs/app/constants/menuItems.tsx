@@ -2,7 +2,7 @@ import React from "react";
 import { MenuItem } from "./types/MenuItem";
 import { Box, LibraryBig } from "lucide-react";
 import { GettingStarted } from "./icons/GettingStarted";
-import { DOC_ROUTES } from "./route";
+import { DOC_ROUTES } from "./routes";
 
 export type MenuItems = MenuItem[];
 

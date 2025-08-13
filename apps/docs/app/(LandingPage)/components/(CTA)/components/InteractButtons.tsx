@@ -1,7 +1,7 @@
 import { Sparkles } from "lucide-react";
 import { OutLinedButton } from "../../../../components";
 import Link from "next/link";
-import { DOC_ROUTES } from "../../../../constants/route";
+import { DOC_ROUTES } from "../../../../constants/routes";
 
 export default function InteractButtons() {
   return (

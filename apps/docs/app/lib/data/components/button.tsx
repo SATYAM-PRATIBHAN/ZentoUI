@@ -154,7 +154,7 @@ const ButtonDocs: DocContent = {
                 <td className="border border-gray-300 p-2">children?</td>
                 <td className="border border-gray-300 p-2">string</td>
                 <td className="border border-gray-300 p-2">
-                  Button label (default: "Get Started").
+                  Button label (default: &quot;Get Started&quot;).
                 </td>
               </tr>
               <tr className="bg-white">

@@ -3,7 +3,7 @@ import { FAQ } from "../../components";
 import Github from "../../constants/icons/GithubLogo";
 import type { DocContent } from "../get-doc-content";
 import Link from "next/link";
-import { DOC_ROUTES } from "../../constants/route";
+import { DOC_ROUTES } from "../../constants/routes";
 
 const data: FAQItem[] = [
   {

@@ -52,8 +52,8 @@ const SwitchDocs: DocContent = {
         <h2 className="text-xl font-semibold text-gray-800">Toggle Switch</h2>
         <p>
           The <code>Switch</code> component provides a simple on/off toggle UI
-          with smooth animations. It's great for enabling or disabling features
-          without using traditional checkboxes.
+          with smooth animations. It&apos;s great for enabling or disabling
+          features without using traditional checkboxes.
         </p>
         <PreviewSwitcher
           preview={
@@ -70,9 +70,9 @@ const SwitchDocs: DocContent = {
         <h2 className="text-xl font-semibold text-gray-800">Theme Switch</h2>
         <p>
           The <code>ThemeSwitch</code> component allows users to easily switch
-          between light, dark, and system themes with animated transitions. It's
-          ideal for providing a user-friendly way to control the application's
-          appearance.
+          between light, dark, and system themes with animated transitions.
+          It&apos;s ideal for providing a user-friendly way to control the
+          application&apos;s appearance.
         </p>
         <PreviewSwitcher
           preview={
@@ -135,7 +135,8 @@ const SwitchDocs: DocContent = {
                 </td>
                 <td className="border border-gray-300 p-2">onChange</td>
                 <td className="border border-gray-300 p-2">
-                  (theme: "light" | "dark" | "system") =&gt; void
+                  (theme: &quot;light&quot; | &quot;dark&quot; |
+                  &quot;system&quot;) =&gt; void
                 </td>
                 <td className="border border-gray-300 p-2">
                   Callback function triggered when the theme changes.
@@ -144,10 +145,10 @@ const SwitchDocs: DocContent = {
               <tr className="bg-white">
                 <td className="border border-gray-300 p-2">initialTheme</td>
                 <td className="border border-gray-300 p-2">
-                  "light" | "dark" | "system"
+                  &quot;light&quot; | &quot;dark&quot; | &quot;system&quot;
                 </td>
                 <td className="border border-gray-300 p-2">
-                  The initial theme to display. Defaults to "light".
+                  The initial theme to display. Defaults to &quot;light&quot;.
                 </td>
               </tr>
             </tbody>

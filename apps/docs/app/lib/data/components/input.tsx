@@ -66,7 +66,8 @@ const InputDocs: DocContent = {
                 <td className="border border-gray-300 p-2">type</td>
                 <td className="border border-gray-300 p-2">string</td>
                 <td className="border border-gray-300 p-2">
-                  The HTML input type (default is <code>"text"</code>).
+                  The HTML input type (default is <code>&quot;text&quot;</code>
+                  ).
                 </td>
               </tr>
             </tbody>
