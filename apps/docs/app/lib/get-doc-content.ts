@@ -14,6 +14,9 @@ import PricingSection from "./data/sections/pricing";
 import ButtonDocs from "./data/components/button";
 import AccordionDocs from "./data/components/accordion";
 import InputDocs from "./data/components/input";
+import SwitchDocs from "./data/components/switch";
+import BadgeDocs from "./data/components/badge";
+import CardDocs from "./data/components/card";
 
 export const docs: Record<string, DocContent> = {
   introduction: Introduction,
@@ -23,6 +26,9 @@ export const docs: Record<string, DocContent> = {
   "components/button": ButtonDocs,
   "components/accordion": AccordionDocs,
   "components/input": InputDocs,
+  "components/switch": SwitchDocs,
+  "components/badge": BadgeDocs,
+  "components/card": CardDocs
 };
 
 export function getDocBySlug(slug: string[]): DocContent | null {

@@ -1,5 +1,13 @@
-export const InProgressBadge = () => {
+export const InProgressBadge = ({ children }: {children?: string}) => {
   return (
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: "1rem",
+      }}
+    >
     <div
       style={{
         display: "inline-flex",
@@ -24,7 +32,8 @@ export const InProgressBadge = () => {
           marginRight: "8px",
         }}
       />
-      In progress
+      {children || "In progress"}
+    </div>
     </div>
   );
 };

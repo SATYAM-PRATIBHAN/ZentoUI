@@ -1,10 +1,17 @@
-"use client";
-
 import { useEffect, useState } from "react";
 
-export function ToggleButton() {
-  const [checked, setChecked] = useState(false);
+interface ToggleButtonProps {
+  checkedValue: boolean;
+  onChange: () => void;
+}
+
+export function ToggleButton(props: ToggleButtonProps) {
+  const [checked, setChecked] = useState(props.checkedValue);
   const [isSmall, setIsSmall] = useState(false);
+
+  useEffect(() => {
+    setChecked(props.checkedValue);
+  }, [props.checkedValue]);
 
   useEffect(() => {
     const checkSize = () => setIsSmall(window.innerWidth < 500);
@@ -12,6 +19,12 @@ export function ToggleButton() {
     window.addEventListener("resize", checkSize);
     return () => window.removeEventListener("resize", checkSize);
   }, []);
+
+  const handleToggle = () => {
+    const newChecked = !checked;
+    setChecked(newChecked);
+    props.onChange();
+  };
 
   const containerStyle = {
     position: "relative",
@@ -66,11 +79,19 @@ export function ToggleButton() {
   };
 
   return (
-    <div style={containerStyle as React.CSSProperties}>
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: "1rem",
+      }}
+    >
+      <div style={containerStyle as React.CSSProperties}>
       <input
         checked={checked}
         id="toggle-switch"
-        onChange={() => setChecked(!checked)}
+        onChange={handleToggle}
         style={{ display: "none" }}
         type="checkbox"
       />
@@ -101,6 +122,7 @@ export function ToggleButton() {
           <div className="led" style={ledStyle as React.CSSProperties} />
         </div>
       </label>
+    </div>
     </div>
   );
 }

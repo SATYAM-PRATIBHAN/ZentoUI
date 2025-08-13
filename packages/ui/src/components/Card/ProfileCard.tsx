@@ -2,7 +2,15 @@
 
 import { useEffect, useState } from "react";
 
-export function ContactCard() {
+interface Props {
+  bannerImage?: string;
+  profileImage?: string;
+  name?: string;
+  description?: string;
+  buttonLabel?: string;
+}
+
+export function ContactCard(props: Props) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -38,7 +46,9 @@ export function ContactCard() {
             height: isMobile ? "150px" : "199px",
             borderRadius: "16px",
             background: "radial-gradient(circle at center, #FFA07A, #BA86FC)",
-            backgroundImage: "url(/shoes.webp)",
+            backgroundImage: props.bannerImage 
+              ? `url(${props.bannerImage})` 
+              : "url(/shoes.webp)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             position: "relative",
@@ -59,7 +69,9 @@ export function ContactCard() {
               height: isMobile ? "60px" : "80px",
               borderRadius: "1000px",
               border: "3.5px solid #FFF",
-              background: "url(/profilepicture.webp) center/cover no-repeat",
+              background: props.profileImage
+                ? `url(${props.profileImage}) center/cover no-repeat`
+                : "url(/profilepicture.webp) center/cover no-repeat",
               boxShadow: "6px 6px 15px 0px rgba(120, 132, 149, 0.15)",
             }}
           />
@@ -85,7 +97,7 @@ export function ContactCard() {
             margin: 0,
           }}
         >
-          ZentoUI Creations
+          {props.name || "ZentoUI Creations"}
         </h2>
         <p
           style={{
@@ -95,7 +107,7 @@ export function ContactCard() {
             margin: 0,
           }}
         >
-          UI Designer at <span style={{ color: "#161619" }}>@ZentoUI</span>
+          {props.description || "UI Designer at @ZentoUI"}
         </p>
       </div>
 
@@ -118,7 +130,7 @@ export function ContactCard() {
           background: "#FFF",
         }}
       >
-        Contact Me
+        {props.buttonLabel ||"Contact Me"}
       </button>
     </div>
   );

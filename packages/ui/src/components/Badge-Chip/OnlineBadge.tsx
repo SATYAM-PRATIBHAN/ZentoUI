@@ -1,5 +1,13 @@
-export const OnlineBadge = () => {
+export const OnlineBadge = ({ children }: {children?: string}) => {
   return (
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: "1rem",
+      }}
+    >
     <div
       style={{
         display: "inline-flex",
@@ -11,6 +19,7 @@ export const OnlineBadge = () => {
         fontSize: "16px",
         fontWeight: "400",
         fontFamily: "sans-serif",
+        boxShadow: "0px 6px 20.4px -9px rgba(0, 0, 0, 0.25)",
       }}
     >
       <span
@@ -23,7 +32,8 @@ export const OnlineBadge = () => {
           marginRight: "6px",
         }}
       />
-      Online
+      {children || "Online"}
+    </div>
     </div>
   );
 };

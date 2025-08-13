@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { Monitor, Moon, Sun } from "lucide-react";
 import { useState } from "react";
@@ -10,14 +8,32 @@ const icons = {
   system: [<Monitor key="system" color="black" size={20} />, "System Theme"],
 };
 
-export function ThemeSwitch() {
-  const [active, setActive] = useState<"light" | "dark" | "system">("light");
+interface ThemeSwitchProps {
+  onChange?: (theme: "light" | "dark" | "system") => void;
+  initialTheme?: "light" | "dark" | "system";
+}
+
+export function ThemeSwitch({ onChange, initialTheme = "light" }: ThemeSwitchProps) {
+  const [active, setActive] = useState<"light" | "dark" | "system">(initialTheme);
 
   const options: ("light" | "dark" | "system")[] = ["light", "dark", "system"];
   const activeIndex = options.indexOf(active);
   const buttonWidth = 44;
 
+  const handleThemeChange = (theme: "light" | "dark" | "system") => {
+    setActive(theme);
+    onChange?.(theme);
+  };
+
   return (
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: "1rem",
+      }}
+    >
     <div
       style={{
         position: "relative",
@@ -48,7 +64,7 @@ export function ThemeSwitch() {
       {options.map((mode) => (
         <button
           key={mode}
-          onClick={() => setActive(mode)}
+          onClick={() => handleThemeChange(mode)}
           aria-label={mode[1]}
           style={{
             position: "relative",
@@ -67,6 +83,7 @@ export function ThemeSwitch() {
           {icons[mode][0]}
         </button>
       ))}
+    </div>
     </div>
   );
 }

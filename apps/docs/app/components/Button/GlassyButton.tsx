@@ -8,7 +8,7 @@ export default function GlassButton({
 }) {
   return (
     <div className="flex items-center justify-center">
-      <GlassyButton children={children || ""} />
+      <GlassyButton children={children || "Get Started"} />
     </div>
   );
 }
