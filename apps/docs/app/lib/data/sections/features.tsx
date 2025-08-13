@@ -1,7 +1,7 @@
 "use client";
 
 import { DocContent } from "../../get-doc-content";
-import { ArrowRight, Zap, Users, Shield, Rocket, Globe } from "lucide-react"
+import { ArrowRight, Zap, Users, Shield, Rocket, Globe } from "lucide-react";
 import { PreviewSwitcher } from "../../../components/ui/docs/PreviewSwitcher";
 import { CodeBlock } from "../../../components/ui/docs/CodeBlock";
 import React from "react";
@@ -71,8 +71,9 @@ function FeaturesSectionContent() {
             <span className="text-gray-800">Together</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Through innovative technology solutions and strategic partnerships, we're transforming how businesses
-            connect, grow, and succeed in the digital age.
+            Through innovative technology solutions and strategic partnerships,
+            we're transforming how businesses connect, grow, and succeed in the
+            digital age.
           </p>
         </div>
 
@@ -80,11 +81,13 @@ function FeaturesSectionContent() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {/* Feature 1 - Light Blue with Dot Pattern */}
           <div className="relative bg-blue-100 rounded-3xl p-8 overflow-hidden">
-
             <div className="absolute top-4 right-4 opacity-15">
               <div className="grid grid-cols-4 gap-2">
                 {[...Array(16)].map((_, i) => (
-                  <div key={i} className="w-2 h-2 bg-blue-300 rounded-full"></div>
+                  <div
+                    key={i}
+                    className="w-2 h-2 bg-blue-300 rounded-full"
+                  ></div>
                 ))}
               </div>
             </div>
@@ -102,7 +105,8 @@ function FeaturesSectionContent() {
               </div>
 
               <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                Our cutting-edge platform delivers lightning-fast performance with enterprise-grade reliability.
+                Our cutting-edge platform delivers lightning-fast performance
+                with enterprise-grade reliability.
               </p>
 
               <div className="flex items-end justify-between">
@@ -120,11 +124,13 @@ function FeaturesSectionContent() {
 
           {/* Feature 2 - Light Orange with Line Pattern */}
           <div className="relative bg-orange-100 rounded-3xl p-8 overflow-hidden">
-
             <div className="absolute top-8 right-8 opacity-12">
               <div className="space-y-2">
                 {[...Array(6)].map((_, i) => (
-                  <div key={i} className="w-12 h-0.5 bg-orange-300 transform rotate-45"></div>
+                  <div
+                    key={i}
+                    className="w-12 h-0.5 bg-orange-300 transform rotate-45"
+                  ></div>
                 ))}
               </div>
             </div>
@@ -132,13 +138,19 @@ function FeaturesSectionContent() {
             <div className="absolute bottom-20 right-16 opacity-10">
               <div
                 className="w-12 h-12 bg-orange-200"
-                style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+                style={{
+                  clipPath:
+                    "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                }}
               ></div>
             </div>
             <div className="absolute top-12 right-24 opacity-8">
               <div
                 className="w-6 h-6 bg-orange-300"
-                style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+                style={{
+                  clipPath:
+                    "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                }}
               ></div>
             </div>
 
@@ -148,7 +160,8 @@ function FeaturesSectionContent() {
               </div>
 
               <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                Connect with a thriving community of developers, creators, and innovators worldwide.
+                Connect with a thriving community of developers, creators, and
+                innovators worldwide.
               </p>
 
               <div className="flex items-end justify-between">
@@ -166,7 +179,6 @@ function FeaturesSectionContent() {
 
           {/* Feature 3 - Light Green with Triangle Pattern */}
           <div className="relative bg-green-100 rounded-3xl p-8 overflow-hidden">
-
             <div className="absolute top-6 right-6 opacity-12">
               <div className="grid grid-cols-3 gap-3">
                 {[...Array(9)].map((_, i) => (
@@ -191,7 +203,8 @@ function FeaturesSectionContent() {
               </div>
 
               <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                Bank-level security protocols protect your data with advanced encryption and monitoring.
+                Bank-level security protocols protect your data with advanced
+                encryption and monitoring.
               </p>
 
               <div className="flex items-end justify-between">
@@ -212,11 +225,25 @@ function FeaturesSectionContent() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Feature 4 - Light Pink with Wave Pattern */}
           <div className="relative bg-pink-100 rounded-3xl p-8 overflow-hidden">
-
             <div className="absolute top-8 right-8 opacity-12">
-              <svg width="60" height="40" viewBox="0 0 60 40" className="text-pink-300">
-                <path d="M0,20 Q15,5 30,20 T60,20" stroke="currentColor" strokeWidth="2" fill="none" />
-                <path d="M0,30 Q15,15 30,30 T60,30" stroke="currentColor" strokeWidth="2" fill="none" />
+              <svg
+                width="60"
+                height="40"
+                viewBox="0 0 60 40"
+                className="text-pink-300"
+              >
+                <path
+                  d="M0,20 Q15,5 30,20 T60,20"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                />
+                <path
+                  d="M0,30 Q15,15 30,30 T60,30"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                />
               </svg>
             </div>
 
@@ -234,8 +261,9 @@ function FeaturesSectionContent() {
               </div>
 
               <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                Launch your projects faster with our comprehensive suite of development tools and pre-built components
-                that accelerate your workflow.
+                Launch your projects faster with our comprehensive suite of
+                development tools and pre-built components that accelerate your
+                workflow.
               </p>
 
               <div className="flex items-end justify-between">
@@ -245,7 +273,9 @@ function FeaturesSectionContent() {
 
                 <div className="text-right">
                   <div className="text-4xl font-bold text-gray-800">3x</div>
-                  <div className="text-sm text-gray-600">Faster Development</div>
+                  <div className="text-sm text-gray-600">
+                    Faster Development
+                  </div>
                 </div>
               </div>
             </div>
@@ -253,11 +283,13 @@ function FeaturesSectionContent() {
 
           {/* Feature 5 - Light Purple with Grid Pattern */}
           <div className="relative bg-purple-100 rounded-3xl p-8 overflow-hidden">
-
             <div className="absolute top-6 right-6 opacity-12">
               <div className="grid grid-cols-5 gap-1">
                 {[...Array(25)].map((_, i) => (
-                  <div key={i} className="w-1 h-1 bg-purple-300 rounded-sm"></div>
+                  <div
+                    key={i}
+                    className="w-1 h-1 bg-purple-300 rounded-sm"
+                  ></div>
                 ))}
               </div>
             </div>
@@ -281,8 +313,9 @@ function FeaturesSectionContent() {
               </div>
 
               <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                Scale globally with confidence using our distributed infrastructure that ensures optimal performance
-                across all continents and time zones.
+                Scale globally with confidence using our distributed
+                infrastructure that ensures optimal performance across all
+                continents and time zones.
               </p>
 
               <div className="flex items-end justify-between">
@@ -542,6 +575,6 @@ export default function FeaturesSection() {
     </div>
   );
 }
-`
+`;
 
 export default FeaturesSection;

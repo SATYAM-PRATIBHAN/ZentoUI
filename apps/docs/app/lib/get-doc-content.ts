@@ -30,7 +30,7 @@ export const docs: Record<string, DocContent> = {
   "components/switch": SwitchDocs,
   "components/badge": BadgeDocs,
   "components/card": CardDocs,
-  "sections/features": FeaturesSection
+  "sections/features": FeaturesSection,
 };
 
 export function getDocBySlug(slug: string[]): DocContent | null {
