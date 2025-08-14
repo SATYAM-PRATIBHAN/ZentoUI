@@ -5,3 +5,4 @@ export * from "./Card";
 export * from "./Input-Field";
 export * from "./Switch";
 export * from "./Toast-Alert";
+export { default as CombinedNavigation } from "./ui/CombinedNavigation";

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/ui/Navbar";
+import { CombinedNavigation } from "./components";
 import Footer from "./components/ui/Footer";
 
 const geistSans = Geist({
@@ -59,7 +60,14 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
-        <Navbar />
+        {/* Mobile/Tablet Navigation */}
+        <div className="md:hidden">
+          <CombinedNavigation />
+        </div>
+        {/* Desktop Navigation */}
+        <div className="hidden md:block">
+          <Navbar />
+        </div>
         {children}
         <Footer />
       </body>

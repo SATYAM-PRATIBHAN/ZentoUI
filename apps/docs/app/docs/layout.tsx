@@ -7,10 +7,12 @@ export default function DocsLayout({
 }>) {
   return (
     <div className="flex h-screen px-2">
-      <div className="w-64 overflow-auto">
+      {/* Desktop Sidebar */}
+      <div className="hidden md:block w-64 overflow-auto">
         <Sidebar />
       </div>
-      <div className="flex-1 overflow-auto">{children}</div>
+      {/* Mobile/Tablet Content - full width */}
+      <div className="flex-1 overflow-auto md:ml-0">{children}</div>
     </div>
   );
 }
