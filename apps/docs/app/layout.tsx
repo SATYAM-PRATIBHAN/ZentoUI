@@ -19,7 +19,14 @@ export const metadata: Metadata = {
   title: "ZentoUI - Modern React Component Library",
   description:
     "ZentoUI is a modern, responsive React component library built for sleek and fast web interfaces. It offers beautifully designed, accessible, and customizable UI elements for effortless development.",
-  keywords: ["React", "Component Library", "UI", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  keywords: [
+    "React",
+    "Component Library",
+    "UI",
+    "TypeScript",
+    "Tailwind CSS",
+    "Framer Motion",
+  ],
   authors: [{ name: "ZentoUI Team" }],
   creator: "ZentoUI",
   publisher: "ZentoUI",
@@ -36,7 +43,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "ZentoUI - Modern React Component Library",
-    description: "ZentoUI is a modern, responsive React component library built for sleek and fast web interfaces. It offers beautifully designed, accessible, and customizable UI elements for effortless development.",
+    description:
+      "ZentoUI is a modern, responsive React component library built for sleek and fast web interfaces. It offers beautifully designed, accessible, and customizable UI elements for effortless development.",
     url: "https://zento-ui.vercel.app", // Update this with your actual domain
     siteName: "ZentoUI",
     type: "website",
@@ -53,7 +61,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ZentoUI - Modern React Component Library",
-    description: "ZentoUI is a modern, responsive React component library built for sleek and fast web interfaces. It offers beautifully designed, accessible, and customizable UI elements for effortless development.",
+    description:
+      "ZentoUI is a modern, responsive React component library built for sleek and fast web interfaces. It offers beautifully designed, accessible, and customizable UI elements for effortless development.",
     images: [
       {
         url: "/og-image.webp",
