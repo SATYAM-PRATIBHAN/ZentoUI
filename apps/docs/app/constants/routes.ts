@@ -26,6 +26,7 @@ export const DOC_ROUTES = {
       PRICING: "/docs/sections/pricing",
       HERO: "/docs/sections/home",
       FEATURES: "/docs/sections/features",
+      SIGNIN: "/docs/sections/signin",
     },
   },
   PRIVACY_POLICY: "/privacy",

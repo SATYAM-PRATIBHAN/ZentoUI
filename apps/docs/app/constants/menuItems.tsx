@@ -32,10 +32,14 @@ export const menuItems = [
       { label: "Modal" },
       {
         label: "Switch",
-        badge: "New",
+
         link: `${DOC_ROUTES.DOCS.COMPONENTS.SWITCH}`,
       },
-      { label: "Toast/Alert" },
+      {
+        label: "Toast/Alert",
+        badge: "New",
+        link: `${DOC_ROUTES.DOCS.COMPONENTS.TOAST}`,
+      },
     ],
   },
   {
@@ -47,6 +51,7 @@ export const menuItems = [
       { label: "Feature", link: `${DOC_ROUTES.DOCS.SECTION.FEATURES}` },
       { label: "Hero" },
       { label: "Pricing", link: `${DOC_ROUTES.DOCS.SECTION.PRICING}` },
+      { label: "Sign-In", link: `${DOC_ROUTES.DOCS.SECTION.SIGNIN}` },
     ],
   },
 ];

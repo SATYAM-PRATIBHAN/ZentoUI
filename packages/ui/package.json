@@ -1,6 +1,6 @@
 {
-  "name":  "@satyampratibhan/zento-ui",
-  "version": "0.0.1",
+  "name": "@satyampratibhan/zento-ui",
+  "version": "0.0.2",
   "private": false,
   "exports": {
     ".": "./src/index.ts",

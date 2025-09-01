@@ -18,19 +18,23 @@ import SwitchDocs from "./data/components/switch";
 import BadgeDocs from "./data/components/badge";
 import CardDocs from "./data/components/card";
 import FeaturesSection from "./data/sections/features";
+import ToastDocs from "./data/components/toast";
+import SignInSection from "./data/sections/signin";
 
 export const docs: Record<string, DocContent> = {
   introduction: Introduction,
   installation: Installation,
   usage: Usage,
-  "sections/pricing": PricingSection,
   "components/button": ButtonDocs,
   "components/accordion": AccordionDocs,
   "components/input": InputDocs,
   "components/switch": SwitchDocs,
   "components/badge": BadgeDocs,
   "components/card": CardDocs,
+  "components/toast": ToastDocs,
+  "sections/pricing": PricingSection,
   "sections/features": FeaturesSection,
+  "sections/signin": SignInSection,
 };
 
 export function getDocBySlug(slug: string[]): DocContent | null {
