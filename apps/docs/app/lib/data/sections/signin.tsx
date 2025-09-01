@@ -24,8 +24,8 @@ function SignInPreviewWithToggle() {
         <ol className="list-decimal space-y-4 pl-5 text-gray-800 text-base">
           <li>
             <strong>Copy the component:</strong> Copy the{" "}
-            <code>SignInPage</code> component and place it in your project&apos;s{" "}
-            <code>components/</code> folder.
+            <code>SignInPage</code> component and place it in your
+            project&apos;s <code>components/</code> folder.
           </li>
           <li>
             <strong>Import & use it:</strong> Wherever you want to show the
