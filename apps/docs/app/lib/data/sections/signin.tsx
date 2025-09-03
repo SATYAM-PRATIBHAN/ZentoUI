@@ -5,6 +5,7 @@ import { PreviewSwitcher } from "../../../components/ui/docs/PreviewSwitcher";
 import React from "react";
 import { CodeBlock } from "../../../components/ui/docs/CodeBlock";
 import Image from "next/image";
+import Link from "next/link";
 
 const SignInSection: DocContent = {
   title: "Sign In Section",
@@ -69,7 +70,7 @@ function OverlapCircles({ className = "" }: { className?: string }) {
 function SignInRightPanel() {
   return (
     <section className="relative">
-      <div className="relative h-[500px] sm:h-[600px] md:h-[800px] w-full overflow-hidden rounded-[16px] sm:rounded-[24px] md:rounded-[32px]">
+      <div className="relative h-[600px] sm:h-[700px] md:h-[800px] w-full overflow-hidden rounded-[16px] sm:rounded-[24px] md:rounded-[32px]">
         {/* Background image */}
         <Image
           src="/car-portrait.webp"
@@ -135,13 +136,13 @@ function SignInRightPanel() {
                   id="remember"
                   name="remember"
                   type="checkbox"
-                  className="h-3 w-3 sm:h-4 sm:w-4 rounded border border-foreground/30 accent-lime-400"
+                  className="h-3 w-3 cursor-pointer sm:h-4 sm:w-4 rounded border border-foreground/30 accent-lime-400"
                 />
                 <span className="text-foreground">Remember me</span>
               </label>
               <a
                 href="#"
-                className="text-xs sm:text-sm text-muted-foreground hover:text-foreground"
+                className="text-xs text-gray-600 sm:text-sm text-muted-foreground hover:text-foreground"
               >
                 Forgot your password?
               </a>
@@ -149,9 +150,47 @@ function SignInRightPanel() {
 
             <button
               type="submit"
-              className="h-10 sm:h-12 w-full rounded-full bg-black text-white hover:bg-black/90 text-sm sm:text-base font-medium"
+              className="h-10 sm:h-12 w-full rounded-full bg-black text-white hover:bg-black/90 text-sm sm:text-base font-medium cursor-pointer"
             >
               login
+            </button>
+
+            <div className="flex items-center gap-3 py-1">
+              <div className="h-px flex-1 bg-foreground/10" />
+              <span className="text-[10px] sm:text-xs text-muted-foreground">
+                Or
+              </span>
+              <div className="h-px flex-1 bg-foreground/10" />
+            </div>
+
+            <button
+              type="button"
+              className="h-10 sm:h-12 w-full rounded-full border border-foreground/15 bg-white text-foreground hover:bg-foreground/5 text-sm sm:text-base font-medium inline-flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                className="h-4 w-4 sm:h-5 sm:w-5"
+                aria-hidden
+              >
+                <path
+                  fill="#FFC107"
+                  d="M43.611 20.083H42V20H24v8h11.303C33.826 31.91 29.28 35 24 35c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.676 5.053 29.59 3 24 3 12.955 3 4 11.955 4 23s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.651-.389-3.917z"
+                />
+                <path
+                  fill="#FF3D00"
+                  d="M6.306 14.691l6.571 4.819C14.297 16.108 18.789 13 24 13c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.676 5.053 29.59 3 24 3 15.599 3 8.383 7.99 6.306 14.691z"
+                />
+                <path
+                  fill="#4CAF50"
+                  d="M24 43c5.217 0 10.246-1.99 13.997-5.657l-6.476-5.482C29.456 33.912 26.822 35 24 35c-5.262 0-9.793-3.063-11.61-7.463l-6.54 5.04C7.877 38.9 15.355 43 24 43z"
+                />
+                <path
+                  fill="#1976D2"
+                  d="M43.611 20.083H42V20H24v8h11.303c-1.059 3.077-3.28 5.495-6.382 6.861l.001-.001 6.476 5.482C37.246 41.01 44 36 44 23c0-1.341-.138-2.651-.389-3.917z"
+                />
+              </svg>
+              Continue with Google
             </button>
 
             <div className="mt-2 rounded-xl sm:rounded-2xl border border-black/10 p-1">
@@ -165,27 +204,6 @@ function SignInRightPanel() {
               </div>
             </div>
           </form>
-        </div>
-
-        <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-white/90 text-xs sm:text-sm">
-          01/05
-        </div>
-
-        <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 flex gap-2 sm:gap-3">
-          <button
-            aria-label="Previous"
-            className="grid size-8 sm:size-10 place-items-center rounded-full border border-white/30 bg-black/30 text-white backdrop-blur hover:bg-black/40 text-sm sm:text-base"
-            type="button"
-          >
-            ‹
-          </button>
-          <button
-            aria-label="Next"
-            className="grid size-8 sm:size-10 place-items-center rounded-full border border-white/30 bg-black/30 text-white backdrop-blur hover:bg-black/40 text-sm sm:text-base"
-            type="button"
-          >
-            ›
-          </button>
         </div>
       </div>
     </section>
@@ -224,10 +242,12 @@ function SignInPage() {
                 <span className="mt-1 block font-semibold">THE WORLD.</span>
               </h1>
 
-              <div className="pt-2 sm:pt-4 text-muted-foreground">
-                <p className="text-xs sm:text-sm">Don&apos;t have account?</p>
+              <div className="pt-2 flex flex-col sm:pt-4 text-muted-foreground">
+                <Link href="/docs" className="text-xs sm:text-sm">
+                  Don&apos;t have account?
+                </Link>
                 <button
-                  className="mt-2 inline-flex items-center gap-2 rounded-full border border-foreground/20 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium hover:bg-foreground/5"
+                  className="mt-2 inline-flex items-center gap-2 rounded-full border border-foreground/20 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium hover:bg-foreground/5 cursor-pointer w-fit"
                   aria-label="Create account"
                   type="button"
                 >
@@ -361,6 +381,22 @@ function SignInRightPanel() {
 
             <button type="submit" className="h-10 sm:h-12 w-full rounded-full bg-black text-white hover:bg-black/90 text-sm sm:text-base font-medium">
               login
+            </button>
+
+            <div className="flex items-center gap-3 py-1">
+              <div className="h-px flex-1 bg-foreground/10" />
+              <span className="text-[10px] sm:text-xs text-muted-foreground">Or</span>
+              <div className="h-px flex-1 bg-foreground/10" />
+            </div>
+
+            <button type="button" className="h-10 sm:h-12 w-full rounded-full border border-foreground/15 bg-white text-foreground hover:bg-foreground/5 text-sm sm:text-base font-medium inline-flex items-center justify-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden>
+                <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303C33.826 31.91 29.28 35 24 35c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.676 5.053 29.59 3 24 3 12.955 3 4 11.955 4 23s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.651-.389-3.917z"/>
+                <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.297 16.108 18.789 13 24 13c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.676 5.053 29.59 3 24 3 15.599 3 8.383 7.99 6.306 14.691z"/>
+                <path fill="#4CAF50" d="M24 43c5.217 0 10.246-1.99 13.997-5.657l-6.476-5.482C29.456 33.912 26.822 35 24 35c-5.262 0-9.793-3.063-11.61-7.463l-6.54 5.04C7.877 38.9 15.355 43 24 43z"/>
+                <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-1.059 3.077-3.28 5.495-6.382 6.861l.001-.001 6.476 5.482C37.246 41.01 44 36 44 23c0-1.341-.138-2.651-.389-3.917z"/>
+              </svg>
+              Continue with Google
             </button>
 
             <div className="mt-2 rounded-xl sm:rounded-2xl border border-black/10 p-1">
